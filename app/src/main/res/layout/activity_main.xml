@@ -52,6 +52,7 @@
         android:id="@+id/letterTesting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/enriqueta"
         android:text="E"
         android:textSize="200sp"
         app:layout_constraintBottom_toTopOf="@+id/txtResult"

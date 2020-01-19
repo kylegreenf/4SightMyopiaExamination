@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView txtResult;
     private TextView letterTesting;
+    private String correctAnswer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     if (result.get(0) != null) {
                         txtResult.setText(result.get(0));
+                        checkCorrectGuess(result.get(0), correctAnswer);
                         letterTesting.setText(generateRandomLetter());
                     }
                 }
@@ -62,6 +64,17 @@ public class MainActivity extends AppCompatActivity {
         Random r = new Random();
         int l = r.nextInt(26) + 65;
         letter = (char) l;
-        return letter + "";
+        String letterToString = letter + "";
+        correctAnswer = letterToString;
+        return letterToString;
+    }
+
+    private void checkCorrectGuess(String result, String correctAnswer) {
+        String guess = result;
+        if (guess.toLowerCase().equals(correctAnswer.toLowerCase())) {
+            Toast.makeText(this, "Correct input!", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Your guess, " + result + " was incorrect. Correct: " + correctAnswer, Toast.LENGTH_SHORT).show();
+        }
     }
 }
