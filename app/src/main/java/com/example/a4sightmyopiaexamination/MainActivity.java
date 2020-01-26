@@ -23,10 +23,17 @@ public class MainActivity extends AppCompatActivity {
     private MediaPlayer correctGuess;
     private MediaPlayer wrongGuess;
 
+    private int incorrectCount;
+    private int totalQuestions;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Counter setup
+        incorrectCount = 0;
+        totalQuestions = 0;
 
         // Adding sounds for correct or incorrect guess
         correctGuess = MediaPlayer.create(this, R.raw.correct);
@@ -85,8 +92,14 @@ public class MainActivity extends AppCompatActivity {
             correctGuess.start(); // Play a noise
             Toast.makeText(this, "Correct input!", Toast.LENGTH_SHORT).show();
         } else {
+            if (incorrectCount == 3) {
+                // Open diagnosis/analyze
+            }
             wrongGuess.start(); // Play incorrect noise
             Toast.makeText(this, "Your guess, " + result + " was incorrect. Correct: " + correctAnswer, Toast.LENGTH_SHORT).show();
+        }
+        if (totalQuestions == 20) {
+            // Open diagonsis/analyze
         }
     }
 }
