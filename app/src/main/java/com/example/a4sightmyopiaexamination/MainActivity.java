@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.View;
@@ -19,11 +20,20 @@ public class MainActivity extends AppCompatActivity {
     private TextView txtResult;
     private TextView letterTesting;
     private String correctAnswer;
+    private MediaPlayer correctGuess;
+    private MediaPlayer wrongGuess;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Adding sounds for correct or incorrect guess
+        correctGuess = MediaPlayer.create(this, R.raw.correct);
+        wrongGuess = MediaPlayer.create(this, R.raw.wrong);
+
+
+        // Changing the text results
         txtResult = (TextView) findViewById(R.id.txtResult);
         letterTesting = (TextView) findViewById(R.id.letterTesting);
         letterTesting.setText(generateRandomLetter());
@@ -72,8 +82,10 @@ public class MainActivity extends AppCompatActivity {
     private void checkCorrectGuess(String result, String correctAnswer) {
         String guess = result;
         if (guess.toLowerCase().equals(correctAnswer.toLowerCase())) {
+            correctGuess.start(); // Play a noise
             Toast.makeText(this, "Correct input!", Toast.LENGTH_SHORT).show();
         } else {
+            wrongGuess.start(); // Play incorrect noise
             Toast.makeText(this, "Your guess, " + result + " was incorrect. Correct: " + correctAnswer, Toast.LENGTH_SHORT).show();
         }
     }
