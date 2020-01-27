@@ -17,7 +17,6 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView txtResult;
     private TextView letterTesting;
     private String correctAnswer;
     private MediaPlayer correctGuess;
@@ -25,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private int incorrectCount;
     private int totalQuestions;
+    private int fontSize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         // Counter setup
         incorrectCount = 0;
         totalQuestions = 0;
+        fontSize = 160;
 
         // Adding sounds for correct or incorrect guess
         correctGuess = MediaPlayer.create(this, R.raw.correct);
@@ -41,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Changing the text results
-        txtResult = (TextView) findViewById(R.id.txtResult);
         letterTesting = (TextView) findViewById(R.id.letterTesting);
         letterTesting.setText(generateRandomLetter());
     }
@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
                 if (resultCode == RESULT_OK && data != null) {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     if (result.get(0) != null) {
-                        txtResult.setText(result.get(0));
                         checkCorrectGuess(result.get(0), correctAnswer);
                         letterTesting.setText(generateRandomLetter());
                     }
@@ -85,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         correctAnswer = letterToString;
         return letterToString;
     }
+    
 
     private void checkCorrectGuess(String result, String correctAnswer) {
         String guess = result;
