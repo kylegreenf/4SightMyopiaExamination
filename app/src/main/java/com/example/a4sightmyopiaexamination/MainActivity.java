@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -84,13 +85,113 @@ public class MainActivity extends AppCompatActivity {
         correctAnswer = letterToString;
         return letterToString;
     }
-    
+
+    private String generateSpecificRandomLetter(int currentFontSize) {
+        char letter = correctAnswer.charAt(0);
+        char previousLetter = correctAnswer.charAt(0);
+
+        Random r = new Random();
+        int toChoose = r.nextInt(3); // 0, 1, 2
+        while (previousLetter != letter) { //Ensures new character is presented
+            switch (currentFontSize) { //Different font sizes should use different letters according to optometrists.
+                case 160: // E M F
+                    if (toChoose == 0) {
+                        letter = 'E';
+                    } else if (toChoose == 1) {
+                        letter = 'M';
+                    } else if (toChoose == 2) {
+                        letter = 'F';
+                    }
+                    break;
+                case 105: //U H S
+                    if (toChoose == 0) {
+                        letter = 'U';
+                    } else if (toChoose == 1) {
+                        letter = 'H';
+                    } else if (toChoose == 2) {
+                        letter = 'S';
+                    }
+                    break;
+                case 80: //N V T
+                    if (toChoose == 0) {
+                        letter = 'N';
+                    } else if (toChoose == 1) {
+                        letter = 'V';
+                    } else if (toChoose == 2) {
+                        letter = 'T';
+                    }
+                    break;
+                case 66: //Z P D
+                    if (toChoose == 0) {
+                        letter = 'Z';
+                    } else if (toChoose == 1) {
+                        letter = 'P';
+                    } else if (toChoose == 2) {
+                        letter = 'D';
+                    }
+                    break;
+                case 60: //F K L
+                    if (toChoose == 0) {
+                        letter = 'F';
+                    } else if (toChoose == 1) {
+                        letter = 'K';
+                    } else if (toChoose == 2) {
+                        letter = 'L';
+                    }
+                    break;
+                case 49: //A T H
+                    if (toChoose == 0) {
+                        letter = 'A';
+                    } else if (toChoose == 1) {
+                        letter = 'T';
+                    } else if (toChoose == 2) {
+                        letter = 'H';
+                    }
+                    break;
+                case 45: //R O Y
+                    if (toChoose == 0) {
+                        letter = 'R';
+                    } else if (toChoose == 1) {
+                        letter = 'O';
+                    } else if (toChoose == 2) {
+                        letter = 'Y';
+                    }
+                    break;
+                case 41: //L T H
+                    if (toChoose == 0) {
+                        letter = 'L';
+                    } else if (toChoose == 1) {
+                        letter = 'T';
+                    } else if (toChoose == 2) {
+                        letter = 'H';
+                    }
+                    break;
+                case 33: //L K H
+                    if (toChoose == 0) {
+                        letter = 'L';
+                    } else if (toChoose == 1) {
+                        letter = 'K';
+                    } else if (toChoose == 2) {
+                        letter = 'H';
+                    }
+                    break;
+
+            }
+        }
+
+
+        String letterToString = letter + "";
+        correctAnswer = letterToString;
+        return letterToString;
+    }
+
 
     private void checkCorrectGuess(String result, String correctAnswer) {
         String guess = result;
         totalQuestions++;
         if (isPossibleAnswer(guess.toLowerCase(), correctAnswer.toLowerCase())) {
             correctGuess.start(); // Play a noise
+            reduceFontSize();
             Toast.makeText(this, "Correct input!", Toast.LENGTH_SHORT).show();
         } else {
             incorrectCount++;
@@ -103,6 +204,40 @@ public class MainActivity extends AppCompatActivity {
         if (totalQuestions == 20) {
             // Open diagonsis/analyze
         }
+    }
+
+    private void reduceFontSize() {
+        switch (fontSize) {
+            case 160:
+                fontSize = 105;
+                break;
+            case 105:
+                fontSize = 80;
+                break;
+            case 80:
+                fontSize = 66;
+                break;
+            case 66:
+                fontSize = 60;
+                break;
+            case 60:
+                fontSize = 49;
+                break;
+            case 49:
+                fontSize = 45;
+                break;
+            case 45:
+                fontSize = 41;
+                break;
+            case 41:
+                fontSize = 33;
+                break;
+            case 33:
+                fontSize = 33;
+                break;
+        }
+
+        letterTesting.setTextSize(TypedValue.COMPLEX_UNIT_PT, fontSize);
     }
 
     private boolean isPossibleAnswer(String guess, String correctAnswer) {
@@ -194,7 +329,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case "r":
-                if (guess.equals("r") || guess.equals("our") || guess.equals("are")) {
+                if (guess.equals("r") || guess.equals("our") || guess.equals("are") || guess.equals("ar")) {
                     return true;
                 }
                 break;
