@@ -36,8 +36,8 @@
 
     <TextView
         android:id="@+id/letterTesting"
-        android:layout_width="212dp"
-        android:layout_height="513dp"
+        android:layout_width="277dp"
+        android:layout_height="559dp"
         android:fontFamily="@font/enriqueta"
         android:text="E"
         android:textSize="160pt"

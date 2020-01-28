@@ -69,8 +69,11 @@ public class MainActivity extends AppCompatActivity {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                     if (result.get(0) != null) {
                         checkCorrectGuess(result.get(0), correctAnswer);
-                        letterTesting.setText(generateRandomLetter());
+                        // letterTesting.setText(generateRandomLetter());
+                        letterTesting.setText(generateSpecificRandomLetter(fontSize));
+
                     }
+
                 }
                 break;
         }
@@ -91,8 +94,10 @@ public class MainActivity extends AppCompatActivity {
         char previousLetter = correctAnswer.charAt(0);
 
         Random r = new Random();
-        int toChoose = r.nextInt(3); // 0, 1, 2
-        while (previousLetter != letter) { //Ensures new character is presented
+
+        while (previousLetter == letter) { //Ensures new character is presented
+            int toChoose = r.nextInt(3); // 0, 1, 2
+
             switch (currentFontSize) { //Different font sizes should use different letters according to optometrists.
                 case 160: // E M F
                     if (toChoose == 0) {
@@ -309,7 +314,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case "n":
-                if (guess.equals("n") || guess.equals("and n") || guess.equals("end")) {
+                if (guess.equals("n") || guess.equals("and n") || guess.equals("end") || guess.equals("and")) {
                     return true;
                 }
                 break;
