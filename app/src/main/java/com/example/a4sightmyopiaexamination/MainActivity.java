@@ -299,7 +299,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case "k":
-                if (guess.equals("k") || guess.equals("ok") || guess.equals("kay")) {
+                if (guess.equals("k") || guess.equals("ok") || guess.equals("kay") || guess.equals("hey")) {
                     return true;
                 }
                 break;
