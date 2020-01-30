@@ -10,11 +10,22 @@ import android.widget.Button;
 public class HomePage extends AppCompatActivity {
 
     private Button beginExamButton;
+    private Button settingsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+        settingsBtn= (Button) findViewById(R.id.settingsBtn);
+        settingsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoSettings= new Intent(this,Settings.class);
+                startActivity(gotoSettings);
+
+            }
+        });
 
         beginExamButton = (Button) findViewById(R.id.BeginExamButton);
         beginExamButton.setOnClickListener(new View.OnClickListener() {
