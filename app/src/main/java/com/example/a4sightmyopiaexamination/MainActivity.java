@@ -2,11 +2,19 @@ package com.example.a4sightmyopiaexamination;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
+import android.speech.SpeechRecognizer;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
@@ -23,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
     private MediaPlayer correctGuess;
     private MediaPlayer wrongGuess;
 
+    private SpeechRecognizer mSpeechRecognizer;
+    private Intent mSpeechRecognizerIntent;
+
     private int incorrectCount;
     private int totalQuestions;
     private int fontSize;
@@ -31,6 +42,64 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        checkPermission();
+
+        mSpeechRecognizer = SpeechRecognizer.createSpeechRecognizer(this);
+        mSpeechRecognizerIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        mSpeechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        mSpeechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+        mSpeechRecognizer.setRecognitionListener(new RecognitionListener() {
+            @Override
+            public void onReadyForSpeech(Bundle params) {
+
+            }
+
+            @Override
+            public void onBeginningOfSpeech() {
+
+            }
+
+            @Override
+            public void onRmsChanged(float rmsdB) {
+
+            }
+
+            @Override
+            public void onBufferReceived(byte[] buffer) {
+
+            }
+
+            @Override
+            public void onEndOfSpeech() {
+
+            }
+
+            @Override
+            public void onError(int error) {
+
+            }
+
+            @Override
+            public void onResults(Bundle results) {
+                ArrayList<String> matches = results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
+                if (matches != null) {
+                    checkCorrectGuess(matches.get(0), correctAnswer);
+                    letterTesting.setText(generateSpecificRandomLetter(fontSize));
+                }
+            }
+
+            @Override
+            public void onPartialResults(Bundle partialResults) {
+                //Toast.makeText(this, "x", Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onEvent(int eventType, Bundle params) {
+
+            }
+        });
 
         // Counter setup
         incorrectCount = 0;
@@ -45,38 +114,37 @@ public class MainActivity extends AppCompatActivity {
         // Changing the text results
         letterTesting = (TextView) findViewById(R.id.letterTesting);
         letterTesting.setText(generateRandomLetter());
+
+
     }
 
+    private void checkPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!(ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED)) {
+                Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + getPackageName()));
+                startActivity(intent);
+                finish();
+            }
+        }
+    }
+
+    /*
     public void getSpeechInput(View view) {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+
+
 
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(intent, 10);
         } else {
             Toast.makeText(this, "Your device does not support speech input", Toast.LENGTH_SHORT).show();
         }
-    }
+    }*/
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        switch (requestCode) {
-            case 10:
-                if (resultCode == RESULT_OK && data != null) {
-                    ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                    if (result.get(0) != null) {
-                        checkCorrectGuess(result.get(0), correctAnswer);
-                        // letterTesting.setText(generateRandomLetter());
-                        letterTesting.setText(generateSpecificRandomLetter(fontSize));
-
-                    }
-
-                }
-                break;
-        }
+    public void getSpeechInput(View v) {
+        mSpeechRecognizer.startListening(mSpeechRecognizerIntent);
     }
 
     public String generateRandomLetter() {
