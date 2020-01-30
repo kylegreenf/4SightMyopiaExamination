@@ -46,7 +46,7 @@
         tools:text="Begin Examination" />
 
     <Button
-        android:id="@+id/settingsButton"
+        android:id="@+id/settingsBtn"
         android:layout_width="197dp"
         android:layout_height="85dp"
         android:layout_marginBottom="28dp"

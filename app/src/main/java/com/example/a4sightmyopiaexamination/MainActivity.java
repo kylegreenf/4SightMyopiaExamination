@@ -87,11 +87,11 @@ public class MainActivity extends AppCompatActivity {
                     checkCorrectGuess(matches.get(0), correctAnswer);
                     letterTesting.setText(generateSpecificRandomLetter(fontSize));
                 }
+                mSpeechRecognizer.startListening(mSpeechRecognizerIntent);
             }
 
             @Override
             public void onPartialResults(Bundle partialResults) {
-                //Toast.makeText(this, "x", Toast.LENGTH_SHORT).show();
 
             }
 

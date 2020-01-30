@@ -21,9 +21,7 @@ public class HomePage extends AppCompatActivity {
         settingsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent gotoSettings= new Intent(this,Settings.class);
-                startActivity(gotoSettings);
-
+                openSettings();
             }
         });
 
@@ -38,6 +36,11 @@ public class HomePage extends AppCompatActivity {
 
     public void openExplanation() {
         Intent intent = new Intent(this, InstructionsPage.class);
+        startActivity(intent);
+    }
+
+    private void openSettings() {
+        Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
 }
