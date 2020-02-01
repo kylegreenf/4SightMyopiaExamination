@@ -26,6 +26,8 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String FINAL_FONT_SIZE = "com.example.a4sightmyopiaexamination.FINAL_FONT_SIZE";
+
     private TextView letterTesting;
     private String correctAnswer;
     private MediaPlayer correctGuess;
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     private int incorrectCount;
     private int totalQuestions;
-    private int fontSize;
+    private int fontSize = 160;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
     public void getSpeechInput(View v) {
         mSpeechRecognizer.startListening(mSpeechRecognizerIntent);
     }
+
 
     public String generateRandomLetter() {
         char letter;
@@ -269,14 +272,21 @@ public class MainActivity extends AppCompatActivity {
         } else {
             incorrectCount++;
             if (incorrectCount == 3) {
-                // Open diagnosis/analyze
+                openAnalysisActivity();
             }
             wrongGuess.start(); // Play incorrect noise
             Toast.makeText(this, "Your guess, " + result + " was incorrect. Correct: " + correctAnswer, Toast.LENGTH_SHORT).show();
         }
         if (totalQuestions == 20) {
-            // Open diagonsis/analyze
+            openAnalysisActivity();
         }
+    }
+
+    private void openAnalysisActivity() {
+        mSpeechRecognizer.stopListening();
+        Intent intent = new Intent(this, AfterTestAnalysis.class);
+        intent.putExtra(FINAL_FONT_SIZE, fontSize);
+        startActivity(intent);
     }
 
     private void reduceFontSize() {
@@ -347,7 +357,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case "g":
-                if (guess.equals("g") || guess.equals("gee")) {
+                if (guess.equals("g") || guess.equals("gee") || guess.equals("chi")) {
                     return true;
                 }
                 break;
