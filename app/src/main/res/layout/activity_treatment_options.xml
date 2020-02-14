@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TreatmentOptions">
+
+    <EditText
+        android:id="@+id/Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Treatment Options"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="51dp" />
+
+    <Button
+        android:id="@+id/lensbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Lenses"
+        app:layout_constraintBottom_toTopOf="@+id/prkbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/prkbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PRK"
+        app:layout_constraintBottom_toTopOf="@+id/orthokbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/orthokbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ortho-K"
+        app:layout_constraintBottom_toTopOf="@+id/lasikbtn"
+        tools:layout_editor_absoluteX="162dp" />
+
+    <Button
+        android:id="@+id/glassbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glasses"
+        app:layout_constraintBottom_toTopOf="@+id/lensbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/lasikbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lasik"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
