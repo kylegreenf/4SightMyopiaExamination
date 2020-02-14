@@ -1,4 +1,306 @@
 <resources>
     <string name="app_name">4SightMyopiaExamination</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_glasses">Glasses</string>
+    <string name="glasses_text">
+       "Cost: The average cost for standard prescription glasses is around $196 in the US. However,"
+        "this price can fluctuate considerably depending on the features you choose, as well as the"
+        "quality of the glasses, and whether or not you have insurance. High-end glasses can run for up"
+        "to $1000. On the other extreme, $10 can buy a very basic pair. If you want a decent pair that"
+        "can last a while and you don’t have insurance be prepared to pay at least $100.\n\n"
+
+    "Keep in mind that a formal eye exam is also required. Without insurance, the average cost of an"
+        "eye exam is around $200. Retailers such as Costco offer a discounted rate of around $50 for an"
+        "eyeglass exam, but this price is available only to members. In addition, it is good practice to "
+        "periodically reexamine eyes. If your vision has changed, you may need to get new glasses. "
+        "Most doctors recommend annual checkups. This is done to make sure your prescription is up to"
+        "date, so keep that in mind, especially if your vision is prone to change. \n\n"
+
+    "If you have insurance, the price usually drops considerably. Of course, every health insurance"
+        "plan is unique, but generally speaking, eye exams as well as glasses should be covered with a"
+        "minimal copay of around $25. Some policies may also give $100-$200 a year to spend on "
+        "eyewear, which means your glasses could be completely covered if you choose a pair in that"
+        "price range. Check your insurance policy to see what coverage you qualify for to help minimize"
+        "your out of pocket expense. With smart planning, a patient’s out of pocket expenses for"
+        "eyeglasses could become negligible. \n\n"
+
+    "Procurement Process: A formal eye exam is required. You can see an optometrist for this. "
+        "LensCrafters, Costco and PearleVision all offer walk-in appointments for an eye exam."
+        "Once the eye exam is concluded, you will choose a frame. Make sure to choose a high quality"
+        "frame that fits your face, and is comfortable. Frames which are too tight or too heavy may"
+        "cause headaches when worn for extended periods. \n\n"
+
+"Advantages: \n"
+"No recurring costs. Glasses can last a lifetime, barring a change in prescription or accident.\n"
+"Safest, least invasive option. No surgery required.\n"
+        "No risk of eye infection.\n"
+
+"Disadvantages:\n"
+      "Poorly fitted, or low quality glasses may cause headaches.\n\n"
+
+"Options: Lens can include UV filters, anti refractive treatments for driving, and flipdown sunglasses."
+
+    </string>
+    <string name="contact_text">
+    "Types: There are several different types of contact lenses and it is important to know which"
+        "kind of get based on your needs. \n"
+
+"When it comes to material, there are soft lenses, silicone hydrogel lenses, gas permeable lenses,"
+        "hybrid contact lenses and pmma lenses. 64% of contact lenses prescribed in the U.S. are silicone hydrogel"
+        "lenses. This is most likely due to the porosity of the material, which allows oxygen to reach your eye, "
+        "as well as the softness and comfort of the lenses. Gas permeable lenses are more rigid, "
+        "while PMMA lenses do not transmit oxygen to the eye. \n\n"
+
+"When it comes to wearing time, there are 3 major types: daily wear and extended wear. Daily wear contact"
+        "lenses are meant to be used for a single day, put on in the morning and removed and disposed of at night."
+        "Extended wear contact lenses can be worn for several days, usually around a week, without removal.\n\n"
+
+"Cost: It depends on what kind you get. Daily wear contact lenses are usually sold in boxes with 30 pairs, "
+        "retailing for around $30 a box. If you wear contact lenses everyday, you are looking at spending about"
+        "$700 a year on contacts. \n\n"
+
+"Procurement Process: Like eyeglasses, you will need to have an eye exam with an optometrist. There, "
+        "they will determine your prescription, and give you the option of ordering contact lenses in your"
+        "prescription. Make sure the expiration date is far away enough such that the lenses don’t expire "
+        "before you use them.\n\n"
+
+"Advantages:\n"
+        "Contact lenses move with your eye, allow a natural field of view, have no frames to obstruct your vision and greatly reduce distortions.\n"
+"Unlike glasses, they do not fog up or get splattered by mud or rain.\n"
+"Contact lenses are excellent for sports and other physical activities.\n"
+"Many people feel they look better in contact lenses.\n"
+"Compared to eyeglasses, they may offer better, more natural sight\n"
+
+"Disadvantages:\n"
+"Compared with glasses, contact lenses require a longer initial examination and more follow-up visits to maintain eye health. Lens care also requires more time."
+        "If you are going to wear your lenses successfully, you will have to clean and store them properly,"
+        "adhere to lens-wearing schedules and make appointments for follow-up care."
+        "If you are wearing disposable or planned replacement lenses, you will have to carefully follow "
+        "the schedule for throwing away used lenses\n\n"
+"Safety Information: Please be extremely diligent about cleaning and removing your lenses. "
+        "There have been many cases of people developing eye infections, even going blind, from improper "
+        "usage of contact lenses. One case involved a woman who left her daily use contact lenses in for"
+        "several weeks, and ended up going blind from a parasitic infection. You should wash your hands "
+        "before inserting, removing and adjusting contact lenses. If you are wearing extended or continuous "
+        "wear lenses, make sure to purchase contact lens solution, as well as a contact lens container. "
+        "Contact lens containers should be replaced every few months, due to build up of bacteria. "
+        "Do not take any risks when it comes to your eyesight!\n\n"
+</string>
+    <string name="prk_text">
+        "PRK - Photorefractive Keratectomy (invasive)\n"
+"Who is this for?\n"
+"Important: consult an optometrist before considering this option. This guide is for informative purposes only. This is not an exhaustive list of surgical options."
+"Invasive options for eye correction are only recommended for individuals over age 18, because their eyes may change until that point. Typically, surgery is for individuals"
+        "who do not want to deal with the hassle of corrective lenses and want a permanent solution to their nearsightedness."
+"PRK is less popular compared to LASIK, but there are some possible advantages that PRK has over LASIK.\n\n"
+
+"How does it work?\n"
+"Unlike LASIK, where the epithelial layer is temporarily removed, PRK permanently removes a layer."
+"PRK then manually reshapes the cornea with an ultraviolet light beam to allow the eye to focus incoming light, increasing sharpness of vision."
+"A contact lens is placed on the cornea to protect the eye while it regenerates the lost epithelial layer. \n\n"
+
+"Cost:\n"
+"A PRK procedure may cost from around $1,800 to $4,000 total. surgery is typically more expensive than any non-invasive vision option, and PRK is generally not covered by insurance.\n\n"
+
+
+"Procurement Process:\n"
+"Extensive consultation with an optometrist is mandatory. The optometrist will put a potential patient through an eye exam to determine what the right treatment will be."
+        "The procedure itself is brief, around 15 minutes.\n\n"
+
+
+"Advantages:\n"
+"Permanent vision change\n"
+"High success rate \n"
+"Disadvantages:\n"
+"Possible long-term complications:\n"
+"Eye infections\n"
+"Vision loss/damage\n"
+"Chronic pain\n"
+"Dry eyes\n\n"
+"Usage instructions:\n"
+"A post-PRK care plan will be given to the patient post-surgery. The most important thing is to follow those instructions, but here is a general guideline."
+"Generally, keeping the eye moist with prescribed eye drops is common.Avoid straining the eyes and do not shower until a day after the surgery."
+"Unlike LASIK, the cornea has to regrow the removed area, so there will most likely be side effects 2-4 days after the surgery. Over-the-counter painkillers and"
+        "rest is a common way to deal with the discomfort."
+"Meeting up with the optometrist post-surgery to remove the bandage contact lens is the next step, and they will give you instructions depending on the condition of the eye.\n\n"
+
+"PRK vs LASIK\n"
+"PRK is generally more of a straightforward procedure because the epithelial layer is not placed back on to the eye, avoiding corneal flap complications. "
+        "It is also generally more inexpensive compared to LASIK. However, there is a higher risk of infection compared to LASIK, and there is a prolonged"
+        "healing process as the body must regenerate epithelial cells. This means that the eyes will be more sensitive as they heal. Again, conversation "
+        "with the optometrist is necessary to determine which option is best for you.\n\n"
+    </string>
+    <string name="lasik_text">
+        "LASIK - (invasive)\n"
+"Who is this for?\n"
+"Important: consult an optometrist before considering this option. This guide is for informative purposes only. This is not an exhaustive list of surgical options."
+"Invasive options for eye correction are only recommended for individuals over age 18, because their eyes may change until that point. Typically, surgery is for individuals "
+        "who do not want to deal with the hassle of corrective lenses and want a permanent solution to their nearsightedness."
+"LASIK is only one of many options for corrective surgery. Again, it is highly recommended that an optometrist be contacted for further discussion on invasive options.\n\n"
+
+"How does it work?\n"
+"LASIK first separates a layer of the eye called the epithelial layer. LASIK then manually reshapes the cornea with an ultraviolet light beam to allow the eye to focus incoming light, "
+        "increasing sharpness of vision. The epithelial layer is then replaced.\n"
+"Cost:\n"
+"LASIK can range from $1,000 to $3,000 per eye. This price is generally all-encompassing, not just the surgery itself.surgery is typically more expensive than any non-invasive vision option, and LASIK is generally not covered by insurance\n"
+
+"Procurement Process:\n"
+"Extensive consultation with an optometrist is mandatory. The optometrist will put a potential patient through an eye exam to determine what the right treatment will be."
+        "The procedure itself is brief, around 15 minutes.\n\n"
+
+"Advantages:\n"
+"Permanent vision change\n"
+"High success rate (96% satisfaction (Journal of Cataract and Refractive Surgery))\n"
+"Disadvantages:\n"
+"Possible long-term complications:\n"
+"Eye infections\n"
+"Vision loss/damage\n"
+"Chronic pain\n"
+"Dry eyes\n\n"
+
+
+"Usage Instructions:\n"
+"https://www.nvisioncenters.com/lasik/post-care/"
+"A post-LASIK care plan will be given to the patient post-surgery. The most important thing is to follow those instructions, but here is a general guideline. "
+        "Generally, keeping the eye most with prescribed  eye drops is common. Avoid straining the eyes and do not shower until a day after the surgery. "
+ "Meeting up with the optometrist post-surgery for follow-up sessions will most likely be in order."
+"Some discomfort may be felt post-surgery as the eye adjusts to the changes. It is important not to disturb the eyes by rubbing them to give the eyes time to heal.\n\n"
+"PRK vs LASIK\n"
+"PRK is generally more of a straightforward procedure because the epithelial layer is not placed back on to the eye, avoiding corneal flap complications. "
+        "It is also generally more inexpensive compared to LASIK. However, there is a higher risk of infection compared to LASIK, and there is a prolonged"
+        "healing process as the body must regenerate epithelial cells. This means that the eyes will be more sensitive as they heal. Again, conversation "
+        "with the optometrist is necessary to determine which option is best for you.\n\n"
+
+    </string>
+    <string name="orthok_text">
+        "Ortho-K:\n\n"
+"Who is this for?\n"
+"Ortho-K is for individuals of all ages who want to avoid the hassle of wearing vision correcting objects but do not want invasive procedures like LASIK. Generally, Ortho-K offers a"
+        "short-solution for nearsightedness.\n\n"
+
+"How does it work?\n"
+"Ortho-K lenses are a gas-permeable lens that gently reshapes the cornea while the user is asleep. The cornea remains in the flattened state for a temporary period, allowing sharper vision.\n"
+"Overall, there will be around 3 pairs of lenses, each with a greater degree of correction. Once the user is at their desired level of vision, they will stay with the final pair,"
+        "using them every night for correction.\n\n"
+"Cost:\n"
+"The re-shaping process requires multiple trips to the optometrist and possibly more than one set of lens to reshape the cornea. Generally, cost may range from $1,000 to $2,000,"
+        "but some difficult cases may cost as much as $4,000. Significantly, Ortho-K is not completely covered by most insurance companies, so much of the cost will come out of "
+        "the user’s pocket.\n\n"
+
+"Procurement Process:\n"
+"Like most other eye options, a formal eye exam is required. Your optometrist may measure your conrea’s shape to decide what type of lens to use. As mentioned earlier, "
+        "multiple trips will be required to assess change in the cornea and determine if a change of lenses are required.\n\n"
+
+"Advantages:\n"
+"Ortho-K’s main advantage is that it is a non-invasive vision option that does not require vision correcting lenses during the day.\n"
+"Ortho-K’s effects are not permanent, and this means that the option is relatively low-risk.\n"
+"Disadvantages:\n"
+"Ortho-K’s effects are not permanent, and that means routine application of the contact lenses during the night are required for clearer vision the next day."
+        "Some may find this frustrating and opt for a more permanent solution.\n"
+"Ortho-K requires putting on a pair of  contact lenses at night, and this may be uncomfortable for some users, resulting in lower sleep quality."
+        "Typically, however, the lenses become more comfortable after repeated use.\n"
+"While relatively cheap compared to invasive methods, Ortho-K typically costs around $1,000 to $2,000, which is significantly more than glasses.\n\n"
+"Usage Instructions:\n"
+"Instruction depends on the optometrist, and it is highly recommended that the user follow their instructions. However, the lenses are typically applied every night before sleep."
+        "The optometrist will determine what lenses the patient will use. The lenses are not to be used after the patient wakes up.\n\n"
+"Safety Information:\n"
+"https://www.allaboutvision.com/contacts/orthok.htm\n"
+"The website above mentions some effects while the eyes are still adjusting to the process - “blurred vision and glare and halos around lights”. Glasses may be worn to mitigate "
+        "these temporary effects, but it is always safer to consult your optometrist before taking any measures.\n"
+ </string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_contacts">Contacts</string>
+    <string name="title_activity_surgery">Surgery</string>
+    <string name="title_activity_orthok">Orthok</string>
+    <string name="title_activity_lasik">Lasik</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="title_activity_prk">PRK</string>
 </resources>

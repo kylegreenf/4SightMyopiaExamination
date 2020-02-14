@@ -58,4 +58,13 @@
         app:layout_constraintTop_toBottomOf="@+id/BeginExamButton"
         app:layout_constraintVertical_bias="0.09"
         tools:text="Settings" />
+
+    <Button
+        android:id="@+id/resultpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result Page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="365dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

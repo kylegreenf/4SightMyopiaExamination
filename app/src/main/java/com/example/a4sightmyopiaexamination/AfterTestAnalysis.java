@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,11 +18,21 @@ public class AfterTestAnalysis extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_test_analysis);
 
+
         int fontScore = 0;
         Intent intent = getIntent();
         fontScore = intent.getIntExtra(MainActivity.FINAL_FONT_SIZE, 0);
 
         updateScore(fontScore);
+
+        Button treatment=(Button) findViewById(R.id.treatmentbtn);
+        treatment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent treatmentIntent= new Intent(getApplicationContext(),TreatmentOptions.class);
+                startActivity(treatmentIntent);
+            }
+        });
     }
 
     private void updateScore(int fontSize) {
