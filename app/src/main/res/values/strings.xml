@@ -302,5 +302,36 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
-    <string name="title_activity_prk">PRK</string>
+    <string name="title_activity_prk">PRK</string>git
+
+    <string name="proper_eyecare_text">
+        "General eyecare:\n"
+
+        "To keep you eye healthy here are a few easy steps to avoid damaging your eyes during your"
+        "day to day life.\n"
+        "1. Wear sunglasses. Most sunglasses reduced the amount of both UVA and UVB radiation that "
+        "the retina receives in adults. However, while most sunglasses reduce a large amount of UVB "
+        "radiation the amount of UVA reduces is highly dependent on the glasses.\n"
+
+        "2. Wear eye protection. When playing doing work that involves sharp objects or even playing"
+        " certain sports such as racquetball wearing proper eye protection can significantly reduce "
+        "the chance of eye injury.\n"
+
+        "3. Eat a balanced diet and stay active\n"
+
+        "\n"
+        "Myopia prevention\n"
+
+        "The risk of myopia can be reduced by exposure to daylight and increased by performing close"
+        "up work. \“A person with little exposure to daylight has a fivefold risk of developing "
+        "myopia, which can rise as high as a 16-fold risk if that person also performs close-up "
+        "work\". It is recommended that children be exposed to approximately 2 hours of daylight per"
+        " day to prevent myopia. In addition, Progression of myopia can be reduced by administering "
+        "atropine 0.01% eye drops as indicated and prescribed by the treating ophthalmologist."
+        " Effects must be monitored approximately every 6 months. \n\n"
+
+
+
+        " https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5615392/"
+    </string>
 </resources>
