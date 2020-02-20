@@ -11,6 +11,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.provider.Settings;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
     private int incorrectCount;
     private int totalQuestions;
     private int fontSize = 160;
+
+    private int countdownint = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +82,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onError(int error) {
-
+                //letterTesting.setText(Integer.toString(error));
+                mSpeechRecognizer.cancel();
+                startNextListenTimer();
             }
 
             @Override
@@ -89,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                     checkCorrectGuess(matches.get(0), correctAnswer);
                     letterTesting.setText(generateSpecificRandomLetter(fontSize));
                 }
-                mSpeechRecognizer.startListening(mSpeechRecognizerIntent);
+                startNextListenTimer();
             }
 
             @Override
@@ -116,8 +121,63 @@ public class MainActivity extends AppCompatActivity {
         // Changing the text results
         letterTesting = (TextView) findViewById(R.id.letterTesting);
         letterTesting.setText(generateRandomLetter());
+        letterTesting.setText("3");
 
 
+        startCountdownTimer();
+
+    }
+
+    private void startCountdownTimer() {
+        new CountDownTimer(1250, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                //mTextField.setText("seconds remaining: " + millisUntilFinished / 1000);
+            }
+
+            public void onFinish() {
+                //mTextField.setText("done!");
+                lowerCountdown();
+            }
+        }.start();
+    }
+
+    private void startNextListenTimer() {
+        new CountDownTimer(750, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+
+            }
+
+            public void onFinish() {
+                mSpeechRecognizer.startListening(mSpeechRecognizerIntent);
+            }
+        }.start();
+    }
+
+    private void lowerCountdown() {
+        switch (countdownint) {
+            case 3:
+                letterTesting.setText("2");
+                startCountdownTimer();
+                break;
+            case 2:
+                letterTesting.setText("1");
+                startCountdownTimer();
+                break;
+            case 1:
+                letterTesting.setText("0");
+                startCountdownTimer();
+                break;
+            case 0:
+                letterTesting.setText(correctAnswer);
+                getSpeechInput(null);
+                //endAnswerTimerStart();
+                break;
+
+
+        }
+        countdownint--;
     }
 
     private void checkPermission() {
@@ -130,20 +190,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*
-    public void getSpeechInput(View view) {
-        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
-
-
-
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivityForResult(intent, 10);
-        } else {
-            Toast.makeText(this, "Your device does not support speech input", Toast.LENGTH_SHORT).show();
-        }
-    }*/
 
     public void getSpeechInput(View v) {
         mSpeechRecognizer.startListening(mSpeechRecognizerIntent);
@@ -266,7 +312,7 @@ public class MainActivity extends AppCompatActivity {
         String guess = result;
         totalQuestions++;
         if (isPossibleAnswer(guess.toLowerCase(), correctAnswer.toLowerCase())) {
-            correctGuess.start(); // Play a noise
+            //correctGuess.start(); // Play a noise
             reduceFontSize();
             Toast.makeText(this, "Correct input!", Toast.LENGTH_SHORT).show();
         } else {
@@ -274,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
             if (incorrectCount == 3) {
                 openAnalysisActivity();
             }
-            wrongGuess.start(); // Play incorrect noise
+            //wrongGuess.start(); // Play incorrect noise
             Toast.makeText(this, "Your guess, " + result + " was incorrect. Correct: " + correctAnswer, Toast.LENGTH_SHORT).show();
         }
         if (totalQuestions == 20) {
@@ -316,7 +362,7 @@ public class MainActivity extends AppCompatActivity {
                 fontSize = 33;
                 break;
             case 33:
-                fontSize = 33;
+                openAnalysisActivity();
                 break;
         }
 
@@ -347,7 +393,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case "e":
-                if (guess.equals("e") || guess.equals("eek") || guess.equals("aye")) {
+                if (guess.equals("e") || guess.equals("eek") || guess.equals("aye") || guess.equals("chief")) {
                     return true;
                 }
                 break;
@@ -362,7 +408,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case "h":
-                if (guess.equals("h")) {
+                if (guess.equals("h") || guess.equals("aches")) {
                     return true;
                 }
                 break;
@@ -432,7 +478,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case "v":
-                if (guess.equals("v") || guess.equals("v")) {
+                if (guess.equals("v") || guess.equals("pee")) {
                     return true;
                 }
                 break;
@@ -452,7 +498,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case "z":
-                if (guess.equals("z") || guess.equals("zee")) {
+                if (guess.equals("z") || guess.equals("sea") || guess.equals("see")) {
                     return true;
                 }
                 break;
