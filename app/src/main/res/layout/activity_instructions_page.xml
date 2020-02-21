@@ -23,7 +23,7 @@
         android:layout_width="347dp"
         android:layout_height="235dp"
         android:layout_marginTop="116dp"
-        android:text="BLAH BLAH BLAH BLAH INSTRUCTIONS Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        android:text="1) Place the phone at eye level approximately 5 meters away.\n 2) As the test proceeds it will prompt you to close your left or right eye. When prompted close that eye and than read aloud the letters that appears on the screen of your device.\n 3) The test will continue until you reach the smallest font size or you incorrectly read 3 letters of the same font size.\n"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
