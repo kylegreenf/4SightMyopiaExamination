@@ -166,15 +166,9 @@ public class MainActivity extends AppCompatActivity {
                 startCountdownTimer();
                 break;
             case 1:
-                letterTesting.setText("0");
-                startCountdownTimer();
-                break;
-            case 0:
                 letterTesting.setText(correctAnswer);
                 getSpeechInput(null);
-                //endAnswerTimerStart();
                 break;
-
 
         }
         countdownint--;
