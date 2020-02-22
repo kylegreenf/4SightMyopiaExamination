@@ -313,8 +313,8 @@ public class MainActivity extends AppCompatActivity {
         totalQuestions++;
         if (isPossibleAnswer(guess.toLowerCase(), correctAnswer.toLowerCase())) {
             //correctGuess.start(); // Play a noise
+            incorrectCount = 0; //Reset count
             reduceFontSize();
-            Toast.makeText(this, "Correct input!", Toast.LENGTH_SHORT).show();
         } else {
             incorrectCount++;
             if (incorrectCount == 3) {
@@ -323,13 +323,11 @@ public class MainActivity extends AppCompatActivity {
             //wrongGuess.start(); // Play incorrect noise
             Toast.makeText(this, "Your guess, " + result + " was incorrect. Correct: " + correctAnswer, Toast.LENGTH_SHORT).show();
         }
-        if (totalQuestions == 20) {
-            openAnalysisActivity();
-        }
     }
 
     private void openAnalysisActivity() {
         mSpeechRecognizer.stopListening();
+        mSpeechRecognizer.destroy();
         Intent intent = new Intent(this, AfterTestAnalysis.class);
         intent.putExtra(FINAL_FONT_SIZE, fontSize);
         startActivity(intent);
@@ -362,8 +360,14 @@ public class MainActivity extends AppCompatActivity {
                 fontSize = 33;
                 break;
             case 33:
+                fontSize = 32;
                 openAnalysisActivity();
                 break;
+            default:
+                fontSize= 170;
+                openAnalysisActivity();
+                break;
+
         }
 
         letterTesting.setTextSize(TypedValue.COMPLEX_UNIT_PT, fontSize);

@@ -13,17 +13,20 @@ import org.w3c.dom.Text;
 
 public class AfterTestAnalysis extends AppCompatActivity {
 
+    TextView score;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_test_analysis);
 
+        score = (TextView) findViewById(R.id.results);
 
         int fontScore = 0;
         Intent intent = getIntent();
         fontScore = intent.getIntExtra(MainActivity.FINAL_FONT_SIZE, 0);
 
-        updateScore(fontScore);
+        findScore(fontScore);
 
         Button treatment=(Button) findViewById(R.id.treatmentbtn);
         treatment.setOnClickListener(new View.OnClickListener() {
@@ -35,35 +38,41 @@ public class AfterTestAnalysis extends AppCompatActivity {
         });
     }
 
-    private void updateScore(int fontSize) {
-        TextView score = (TextView) findViewById(R.id.results);
-        String result = Integer.toString(fontSize);
-        score.setText("You can read letters at " + result + " pt font size. Right now that means nothing!");
-    }
-
     private void findScore(int fontSize) {
+        String sphConversion = "";
         switch (fontSize) { //Different font sizes assign to different scores
-            case 160: //Uncalculatable 0%
+            case 160: //incalculable 0%
+                sphConversion = "incalculable! We can not measure more than to say see a doctor asap!";
                 break;
             case 105: //2.0-2.5ph 10%
+                sphConversion = "2.0-2.5ph";
                 break;
             case 80: //1.75-2.0sph 20%
+                sphConversion = "1.75-2.0sph";
                 break;
             case 66: // 1.5sph 30%
+                sphConversion = "1.5sph";
                 break;
             case 60: //1.0-1.25sph 40%
+                sphConversion = "1.0-1.25sph";
                 break;
             case 49: //.5sph 50%
+                sphConversion = ".5sph";
                 break;
             case 45: //.5sph 60%
+                sphConversion = ".5sph";
                 break;
             case 41: //.5sph 80%
+                sphConversion = ".5sph";
                 break;
             case 33: //0-.25sph 90%
+                sphConversion = "0-.25sph";
                 break;
             default: //0 - if they get 33pt font correct
+                sphConversion = "perfect!";
                 break;
 
         }
+        score.setText("We calculated that your vision is (approximately) " + sphConversion);
     }
 }
