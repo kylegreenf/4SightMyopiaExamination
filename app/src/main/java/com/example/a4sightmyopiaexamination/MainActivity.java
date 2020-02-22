@@ -291,6 +291,9 @@ public class MainActivity extends AppCompatActivity {
                         letter = 'H';
                     }
                     break;
+                default:
+                    letter = 'Z';
+                    break;
 
             }
         }

@@ -42,7 +42,7 @@ public class AfterTestAnalysis extends AppCompatActivity {
         String sphConversion = "";
         switch (fontSize) { //Different font sizes assign to different scores
             case 160: //incalculable 0%
-                sphConversion = "incalculable! We can not measure more than to say see a doctor asap!";
+                sphConversion = "an incalculable amount of";
                 break;
             case 105: //2.0-2.5ph 10%
                 sphConversion = "2.0-2.5ph";
@@ -69,10 +69,10 @@ public class AfterTestAnalysis extends AppCompatActivity {
                 sphConversion = "0-.25sph";
                 break;
             default: //0 - if they get 33pt font correct
-                sphConversion = "perfect!";
+                sphConversion = "no";
                 break;
 
         }
-        score.setText("We calculated that your vision is (approximately) " + sphConversion);
+        score.setText("We calculated that your vision is in need of (approximately) " + sphConversion + " correction");
     }
 }
