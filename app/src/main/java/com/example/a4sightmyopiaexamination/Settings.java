@@ -8,11 +8,18 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 public class Settings extends AppCompatActivity {
 
+    public static int settingsChartType = 0;
 
     Button returnButton;
+    RadioGroup chartGroup;
+    RadioButton currentSelected;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,11 +35,28 @@ public class Settings extends AppCompatActivity {
             }
         });
 
+        chartGroup = findViewById(R.id.ChartTestGroup);
+
     }
 
     public void returnHome() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, HomePage.class);
         startActivity(intent);
+    }
+
+    public void updateChartType(View v) {
+        int radioId = chartGroup.getCheckedRadioButtonId();
+        currentSelected = findViewById(radioId);
+
+        if (currentSelected.getText().equals("Tumbling E")) {
+            settingsChartType = 1;
+
+        }
+        else {
+            settingsChartType = 0;
+
+        }
+
     }
 
 

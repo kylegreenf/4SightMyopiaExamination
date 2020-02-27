@@ -120,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
         correctGuess = MediaPlayer.create(this, R.raw.correct);
         wrongGuess = MediaPlayer.create(this, R.raw.wrong);
 
+        // Snellen vs Tumbling E
+        testType = com.example.a4sightmyopiaexamination.Settings.settingsChartType;
 
         // Changing the text results
         letterTesting = (TextView) findViewById(R.id.letterTesting);
@@ -170,7 +172,12 @@ public class MainActivity extends AppCompatActivity {
                 startCountdownTimer();
                 break;
             case 1:
-                letterTesting.setText(correctAnswer);
+                if (testType == 1) {
+                    letterTesting.setText("E");
+                }
+                else {
+                    letterTesting.setText(correctAnswer);
+                }
                 getSpeechInput(null);
                 break;
 

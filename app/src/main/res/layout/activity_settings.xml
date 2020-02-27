@@ -6,42 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".Settings">
 
-    <RadioButton
-        android:id="@+id/snellenButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="216dp"
-        android:checked="true"
-        android:text="Snellen (default)"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioButton
-        android:id="@+id/tumblingEButton"
-        android:layout_width="128dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="248dp"
-        android:text="Tumbling E"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/chartTypeInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="105dp"
-        android:layout_marginBottom="92dp"
         android:text="Chart Test"
         android:textAllCaps="false"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/snellenButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ChartTestGroup">
+
+
+        <RadioButton
+            android:id="@+id/SnellenRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Snellen (default)"
+            android:onClick="updateChartType"
+            android:checked="true"
+            >
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/TumblingERadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="updateChartType"
+            android:text="Tumbling E">
+
+        </RadioButton>
+
+    </RadioGroup>
 
     <Button
         android:id="@+id/returnButton"
@@ -52,8 +56,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tumblingEButton"
-        app:layout_constraintVertical_bias="0.93" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
