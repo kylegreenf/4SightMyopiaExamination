@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
     private int countdownint = 3;
 
+    private int testType = 0;
+    private int rotationDegrees = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -124,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
         letterTesting.setText("3");
 
 
+        // Start the timer before test begins
         startCountdownTimer();
 
     }
@@ -191,6 +195,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     public String generateRandomLetter() {
+        if (testType == 1) {
+            correctAnswer = "right";
+            return "E";
+        }
         char letter;
         Random r = new Random();
         int l = r.nextInt(26) + 65;
@@ -201,6 +209,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String generateSpecificRandomLetter(int currentFontSize) {
+        if (testType == 1) {
+            return generateRandomDirectionE();
+        }
+
         char letter = correctAnswer.charAt(0);
         char previousLetter = correctAnswer.charAt(0);
 
@@ -304,8 +316,47 @@ public class MainActivity extends AppCompatActivity {
         return letterToString;
     }
 
+    private String generateRandomDirectionE() {
+        Random r = new Random();
+        int previousRotationDegrees = rotationDegrees;
+        rotationDegrees = r.nextInt(4) * 90;
+
+        if (previousRotationDegrees == rotationDegrees) {
+            rotationDegrees = (rotationDegrees + 90)%360;
+        }
+
+        switch (rotationDegrees) {
+            case 0:
+                correctAnswer = "right";
+                letterTesting.setRotation(0);
+                break;
+            case 90:
+                correctAnswer = "up";
+                letterTesting.setRotation(270);
+                break;
+            case 180:
+                correctAnswer = "left";
+                letterTesting.setRotation(180);
+                break;
+            case 270:
+                correctAnswer = "down";
+                letterTesting.setRotation(90);
+                break;
+            default:
+                correctAnswer = "wow";
+                letterTesting.setRotation(0);
+                break;
+        }
+
+
+
+        //Rotate letter
+        return "E";
+    }
+
 
     private void checkCorrectGuess(String result, String correctAnswer) {
+
         String guess = result;
         totalQuestions++;
         if (isPossibleAnswer(guess.toLowerCase(), correctAnswer.toLowerCase())) {
@@ -372,6 +423,11 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isPossibleAnswer(String guess, String correctAnswer) {
 
+        // If using Tumbling E type
+        if (testType == 1) {
+            return checkEDirection(guess, correctAnswer);
+        }
+
         switch (correctAnswer) {
             case "a":
                 if (guess.equals("a") || guess.equals("hey") || guess.equals("aye")) {
@@ -429,7 +485,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case "l":
-                if (guess.equals("l") || guess.equals("elle")) {
+                if (guess.equals("l") || guess.equals("elle") || guess.equals("hell")) {
                     return true;
                 }
                 break;
@@ -506,6 +562,13 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        return false;
+    }
+
+    private boolean checkEDirection(String guess, String correctAnswer) {
+        if (guess.equals(correctAnswer)) {
+            return true;
+        }
         return false;
     }
 }
