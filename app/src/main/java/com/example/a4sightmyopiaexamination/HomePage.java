@@ -11,7 +11,7 @@ public class HomePage extends AppCompatActivity {
 
     private Button beginExamButton;
     private Button settingsBtn;
-    private Button viewTestBtn;
+    private Button sliderBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +43,11 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
-        viewTestBtn = (Button) findViewById(R.id.viewTestBtn);
-        viewTestBtn.setOnClickListener(new View.OnClickListener() {
+        sliderBtn = (Button) findViewById(R.id.viewTestBtn);
+        sliderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openSettings();
+                openSlider();
             }
         });
 
@@ -63,8 +63,8 @@ public class HomePage extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void openTestSlider() {
-        Intent intent = new Intent(this, ScreenSlidePagerActivity.class);
+    private void openSlider() {
+        Intent intent = new Intent(this, SlidingActivity.class);
         startActivity(intent);
     }
 }

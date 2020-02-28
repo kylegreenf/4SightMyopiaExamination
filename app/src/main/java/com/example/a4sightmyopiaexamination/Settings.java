@@ -31,7 +31,7 @@ public class Settings extends AppCompatActivity {
     }
 
     public void returnHome() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, HomePage.class);
         startActivity(intent);
     }
 
