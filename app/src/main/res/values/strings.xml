@@ -376,4 +376,21 @@ Your vision is estimated at 20/20 or better in this eye.You see perfectly!
         " https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5615392/"
     </string>
     <string name="title_activity_log">Log</string>
+
+    <string name="instructions_text">
+        1) Place the phone at eye level approximately 5 meters away.\n
+        2) As the test proceeds it will prompt you to close your left or right eye. When prompted
+        close that eye and than read aloud the letters that appears on the screen of your device.\n
+        3) The test will continue until you reach the smallest font size or you incorrectly read 3
+        letters of the same font size.
+        size.\n
+    </string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </string>
+
+
+
+    <string name="title_activity_slider">SLIDER</string>
 </resources>
