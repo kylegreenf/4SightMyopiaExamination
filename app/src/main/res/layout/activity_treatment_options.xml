@@ -41,7 +41,8 @@
         android:layout_height="wrap_content"
         android:text="Ortho-K"
         app:layout_constraintBottom_toTopOf="@+id/lasikbtn"
-        tools:layout_editor_absoluteX="162dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/glassbtn"

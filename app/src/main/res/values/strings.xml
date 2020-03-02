@@ -2,6 +2,47 @@
     <string name="app_name">4SightMyopiaExamination</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_glasses">Glasses</string>
+    <string name="worst">
+        Your vision is estimated to be worse than 20/200. This is very serious. How are you able to read this?
+    </string>
+    <string name="info20200">
+Your vision is estimated at 20/200 in this eye. The smallest letters read by somebody with 20/200 vision at 20 feet could be read at 200 feet by a person with normal (20/20) visual acuity.
+Generally, in the US, individuals are required to wear corrective lenses if their vision is worse than 20/40 when driving to prevent automobile accidents. If you drive a vehicle, it is strongly recommended that you look into some form of visual aid.
+To put this in perspective, if an individual had 20/200 vision while driving, they would be 10 times slower to spot a potential hazard in the distance compared to a person with 20/20 vision.
+    </string>
+    <string name="info20100">
+        Your vision is estimated at 20/100 in this eye. The smallest letters read by somebody with 20/100 vision at 20 feet could be read at 100 feet by a person with normal (20/20) visual acuity.
+Generally, in the US, individuals are required to wear corrective lenses if their vision is worse than 20/40 when driving to prevent automobile accidents. If you drive a vehicle, it is strongly recommended that you look into some form of visual aid.
+To put this in perspective, if an individual had 20/100 vision while driving, they would be 5 times slower to spot a potential hazard in the distance compared to a person with 20/20 vision.
+
+
+    </string>
+    <string name="info2070">
+Your vision is estimated at 20/70 in this eye. The smallest letters read by somebody with 20/70 vision at 20 feet could be read at 70 feet by
+a person with normal (20/20) visual acuity.
+Generally, in the US, individuals are required to wear corrective lenses if their vision is worse than 20/40 when driving to prevent automobile accidents. If you drive a vehicle, it is strongly recommended that you look into some form of visual aid.
+To put this in perspective, if an individual had 20/70 vision while driving, they would be 3.5 times slower to spot a potential hazard in the distance compared to a person with 20/20 vision.
+
+    </string>
+    <string name="info2050">
+Your vision is estimated at 20/50 in this eye. The smallest letters read by somebody with 20/50 vision at 20 feet could be read at 50 feet by a person with normal (20/20) visual acuity.
+Generally, in the US, individuals are required to wear corrective lenses if their vision is worse than 20/40 when driving to prevent automobile accidents. If you drive a vehicle, it is strongly recommended that you look into some form of visual aid.
+To put this in perspective, if an individual had 20/50 vision while driving, they would be 2.5 times slower to spot a potential hazard in the distance compared to a person with 20/20 vision.
+(20/50 see 2.5x further)
+
+    </string>
+    <string name="info2040">
+Your vision is estimated at 20/40 in this eye. The smallest letters read by somebody with 20/40 vision at 20 feet could be read at 40 feet by a person with normal (20/20) visual acuity.
+    </string>
+    <string name="info2030">
+Your vision is estimated at 20/30 in this eye. The smallest letters read by somebody with 20/30 vision at 20 feet could be read at 30 feet by a person with normal (20/20) visual acuity.
+    </string>
+    <string name="info2025">
+Your vision is estimated at 20/25 in this eye. The smallest letters read by somebody with 20/25 vision at 20 feet could be read at 25 feet by a person with normal (20/20) visual acuity.
+    </string>
+    <string name="info2020">
+Your vision is estimated at 20/20 or better in this eye.You see perfectly!
+    </string>
     <string name="glasses_text">
        "Cost: The average cost for standard prescription glasses is around $196 in the US. However,"
         "this price can fluctuate considerably depending on the features you choose, as well as the"
@@ -334,4 +375,5 @@
 
         " https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5615392/"
     </string>
+    <string name="title_activity_log">Log</string>
 </resources>

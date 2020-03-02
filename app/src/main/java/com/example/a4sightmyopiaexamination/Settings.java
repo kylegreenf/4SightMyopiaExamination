@@ -25,6 +25,14 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
+        Button logButton = (Button) findViewById(R.id.viewlog);
+        logButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent seelog=new Intent(getApplicationContext(),Log.class);
+                startActivity(seelog);
+            }
+        });
 
         returnButton = (Button) findViewById(R.id.returnButton);
 

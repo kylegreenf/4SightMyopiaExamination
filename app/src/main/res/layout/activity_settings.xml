@@ -20,21 +20,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/viewlog"
+        android:layout_width="92dp"
+        android:layout_height="70dp"
+        android:text="View Log"
+        app:layout_constraintBottom_toTopOf="@+id/returnButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <RadioGroup
+        android:id="@+id/ChartTestGroup"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/ChartTestGroup">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
 
         <RadioButton
             android:id="@+id/SnellenRadio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Snellen (default)"
-            android:onClick="updateChartType"
             android:checked="true"
-            >
-        </RadioButton>
+            android:onClick="updateChartType"
+            android:text="Snellen (default)"></RadioButton>
 
         <RadioButton
             android:id="@+id/TumblingERadio"
