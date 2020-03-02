@@ -12,9 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Log"
+            android:label="@string/title_activity_log"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".PRK"
             android:label="@string/title_activity_prk"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Lasik"
             android:label="@string/title_activity_lasik"
