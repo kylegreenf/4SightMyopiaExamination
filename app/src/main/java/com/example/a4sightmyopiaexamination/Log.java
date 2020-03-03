@@ -34,8 +34,8 @@ public class Log extends AppCompatActivity {
 
         //getting the log data from shared preferences and printing them out
         //for the log page
-        TextView tv= new TextView(this);
-        String log="";
+        TextView tv= (TextView) findViewById(R.id.logtxt);
+        String log="Log:\n";
         SharedPreferences pref=getSharedPreferences("RESULTLOG",MODE_APPEND);
         Map<String,?> allLog=pref.getAll();
         for (Map.Entry<String,?> entry: allLog.entrySet()){
