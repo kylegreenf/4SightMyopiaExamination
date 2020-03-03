@@ -7,57 +7,43 @@
     tools:context=".AfterTestAnalysis">
 
     <TextView
-        android:id="@+id/resultsInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:layout_marginBottom="20dp"
+        android:id="@+id/scoreBig"
+        android:layout_width="305dp"
+        android:layout_height="55dp"
         android:text="Your results:"
-        app:layout_constraintBottom_toTopOf="@+id/results"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/resexplanation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/results"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="524dp"
-        android:text="Correction Needed"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Retake Test"
-        app:layout_constraintBottom_toTopOf="@+id/nametxt"
+        app:layout_constraintBottom_toTopOf="@+id/logbtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="Proper Eyecare"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/treatmentbtn" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/treatmentbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="What are my treatement options?"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resexplanation" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/logbtn"
@@ -68,46 +54,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/nametxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Enter Partient Name"
-        app:layout_constraintBottom_toTopOf="@+id/whicheye"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <RadioGroup
         android:id="@+id/whicheye"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/logbtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <RadioButton
-            android:id="@+id/leftbtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Left Eye" />
-
-        <RadioButton
-            android:id="@+id/rightbtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Right Eye" />
-    </RadioGroup>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/resexplanation"
-        android:layout_width="306dp"
-        android:layout_height="120dp"
+        android:layout_width="381dp"
+        android:layout_height="244dp"
+        android:layout_marginBottom="68dp"
         android:text="Explanation of Results"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/treatmentbtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/dioptxt"
+        android:layout_width="298dp"
+        android:layout_height="46dp"
+        android:text="Diopter Conversion"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/resexplanation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/results" />
+        app:layout_constraintTop_toBottomOf="@+id/scoreBig" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

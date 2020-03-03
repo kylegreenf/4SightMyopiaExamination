@@ -23,15 +23,18 @@ public class AfterTestAnalysis extends AppCompatActivity {
 
     TextView score;
     TextView explanation;
+    TextView diop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_test_analysis);
-        score = (TextView) findViewById(R.id.results);
+        score = (TextView) findViewById(R.id.scoreBig);
+        diop=(TextView) findViewById(R.id.dioptxt);
         Intent intent = getIntent();
         final int fontScore = intent.getIntExtra(MainActivity.FINAL_FONT_SIZE, 0);
-        findScore(fontScore);
+        score.setText("Your result: 20/"+ findNum(fontScore));
+        diop.setText(findDiop(fontScore));
         explanation = (TextView) findViewById(R.id.resexplanation);
         explanation.setText(findExp(fontScore));
         Button treatment=(Button) findViewById(R.id.treatmentbtn);
@@ -43,37 +46,13 @@ public class AfterTestAnalysis extends AppCompatActivity {
             }
         });
 
-        Button saveLog=(Button) findViewById(R.id.logbtn);
-        saveLog.setOnClickListener(new View.OnClickListener() {
+        Button logbttn=(Button) findViewById(R.id.logbtn);
+        logbttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText editName=(EditText)findViewById(R.id.nametxt);
-                String name=editName.getText().toString();
-                if(name.length()==0){
-                    Toast.makeText(getApplicationContext(),"Please enter a name for this log entry.", Toast.LENGTH_LONG).show();
-                }
-                String sideEye;
-                RadioGroup side=(RadioGroup) findViewById(R.id.whicheye);
-                int selectedid=side.getCheckedRadioButtonId();
-                RadioButton selectedside=(RadioButton) findViewById(selectedid);
-                String lefteye="Left Eye";
-                if (selectedside.getText().equals(lefteye)){
-                    sideEye="Left Eye";
-                }
-                else{
-                    sideEye="Right Eye";
-                }
-                DateFormat currentdate=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-                Date date=new Date();
-
-                SharedPreferences sharedPref = getSharedPreferences("RESULTLOG",MODE_PRIVATE);
-                SharedPreferences.Editor myEdit=sharedPref.edit();
-                //HERE SAVE TO LOG
-                String today=currentdate.format(date);
-                String savedString="Name: " + name+"\nDate: " + today + "\nSide: "+ sideEye + "\nScore: " + "20/" + findNum(fontScore)+"\n";
-                //save to log
-                myEdit.putString(today,savedString);
-
+                Intent intent=new Intent(getBaseContext(),SaveToLog.class);
+                intent.putExtra("SCORE",findNum(fontScore));
+                startActivity(intent);
             }
         });
     }
@@ -128,42 +107,28 @@ public class AfterTestAnalysis extends AppCompatActivity {
         }
     }
 
-
-    private void findScore(int fontSize) {
-        String sphConversion = "";
+    private String findDiop(int fontSize) {
         switch (fontSize) { //Different font sizes assign to different scores
             case 160: //incalculable 0%
-                sphConversion = "an incalculable amount of";
-                break;
+                return "Less than -2.50 diopters";
             case 105: //2.0-2.5ph 10%
-                sphConversion = "2.0-2.5ph";
-                break;
+                return "Between -2.50 and -2.00 diopters";
             case 80: //1.75-2.0sph 20%
-                sphConversion = "1.75-2.0sph";
-                break;
+                return "Between -2.00 and -1.75 diopters";
             case 66: // 1.5sph 30%
-                sphConversion = "1.5sph";
-                break;
+                return "Around -1.50 diopters";
             case 60: //1.0-1.25sph 40%
-                sphConversion = "1.0-1.25sph";
-                break;
+                return "Between -1.25 and -1.00 diopters";
             case 49: //.5sph 50%
-                sphConversion = ".5sph";
-                break;
+                return "Around -0.50 diopters";
             case 45: //.5sph 60%
-                sphConversion = ".5sph";
-                break;
+                return "Around -0.50 diopters";
             case 41: //.5sph 80%
-                sphConversion = ".5sph";
-                break;
+                return "Around -0.50 diopters";
             case 33: //0-.25sph 90%
-                sphConversion = "0-.25sph";
-                break;
+                return "Between -0.25 and 0.00 diopters";
             default: //0 - if they get 33pt font correct
-                sphConversion = "no";
-                break;
-
+                return "Around 0.00 diopters";
         }
-        score.setText("We calculated that your vision is in need of (approximately) " + sphConversion + " correction");
     }
 }

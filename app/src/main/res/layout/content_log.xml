@@ -7,4 +7,11 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Log"
-    tools:showIn="@layout/activity_log"/>
+    tools:showIn="@layout/activity_log">
+
+    <TextView
+        android:id="@+id/logtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log" />
+</androidx.core.widget.NestedScrollView>
