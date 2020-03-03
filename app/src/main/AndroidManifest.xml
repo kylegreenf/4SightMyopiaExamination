@@ -39,6 +39,10 @@
             android:name=".Glasses"
             android:label="@string/title_activity_glasses"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SlidingActivity"
+            android:label="@string/title_activity_slider"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".TreatmentOptions" />
         <activity android:name=".AfterTestAnalysis" />
         <activity

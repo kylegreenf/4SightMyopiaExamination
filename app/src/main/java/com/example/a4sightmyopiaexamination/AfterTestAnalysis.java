@@ -32,8 +32,7 @@ public class AfterTestAnalysis extends AppCompatActivity {
         score = (TextView) findViewById(R.id.scoreBig);
         diop=(TextView) findViewById(R.id.dioptxt);
         Intent intent = getIntent();
-        final int fontScore = 66;//intent.getIntExtra(MainActivity.FINAL_FONT_SIZE, 0);
-        //findScore(fontScore);
+        final int fontScore = intent.getIntExtra(MainActivity.FINAL_FONT_SIZE, 0);
         score.setText("Your result: 20/"+ findNum(fontScore));
         diop.setText(findDiop(fontScore));
         explanation = (TextView) findViewById(R.id.resexplanation);
