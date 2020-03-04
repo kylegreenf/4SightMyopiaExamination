@@ -57,7 +57,7 @@ public class SaveToLog extends AppCompatActivity {
                 //HERE SAVE TO LOG
                 String today=currentdate.format(date);
                 String fontScore=getIntent().getStringExtra("SCORE");
-                String savedString="Name: " + name+"\nDate: " + today + "\nSide: "+ sideEye + "\nScore: " + "20/" + fontScore+"\n";
+                String savedString="Name: " + name+"\nDate: " + today + "\nSide: "+ sideEye + "\nScore: " + "20/" + fontScore+"\n\n";
                 //save to log
                 myEdit.putString(today,savedString);
                 myEdit.apply();
