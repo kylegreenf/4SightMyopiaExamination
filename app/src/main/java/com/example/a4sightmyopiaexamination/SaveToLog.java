@@ -1,5 +1,6 @@
 package com.example.a4sightmyopiaexamination;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -61,6 +62,14 @@ public class SaveToLog extends AppCompatActivity {
                 myEdit.putString(today,savedString);
                 myEdit.apply();
 
+            }
+        });
+        Button goHome=(Button) findViewById(R.id.homebtn);
+        goHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),HomePage.class);
+                startActivity(intent);
             }
         });
     }
