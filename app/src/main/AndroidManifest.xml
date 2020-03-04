@@ -45,6 +45,7 @@
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".TreatmentOptions" />
         <activity android:name=".AfterTestAnalysis" />
+        <activity android:name=".BeforeTest"/>
         <activity
             android:name=".Settings"
             android:label="@string/title_activity_settings"

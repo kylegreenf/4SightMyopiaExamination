@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         wrongGuess = MediaPlayer.create(this, R.raw.wrong);
 
         // Snellen vs Tumbling E
-        testType = com.example.a4sightmyopiaexamination.Settings.settingsChartType;
+        testType = com.example.a4sightmyopiaexamination.BeforeTest.settingsChartType;
 
         // Changing the text results
         letterTesting = (TextView) findViewById(R.id.letterTesting);

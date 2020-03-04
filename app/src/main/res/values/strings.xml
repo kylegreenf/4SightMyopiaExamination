@@ -375,9 +375,9 @@ Your vision is estimated at 20/20 or better in this eye.You see perfectly!
         " https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5615392/"
     </string>
     <string name="title_activity_log">Log</string>
-<<<<<<< HEAD
+
     <string name="title_activity_save_to_log">SaveToLog</string>
-=======
+
 
     <string name="instructions_text">
         1) Place the phone at eye level approximately 5 meters away.\n
@@ -392,7 +392,21 @@ Your vision is estimated at 20/20 or better in this eye.You see perfectly!
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </string>
 
-
+    <string name="snellenButton">
+        Snellen
+    </string>
+    <string name="floatingEButton">
+        Floating E
+    </string>
+    <string name="testType">
+        Select which test you would like to take
+    </string>
+    <string name="startTestWithInstructions">
+        Instructions
+    </string>
+    <string name="startTestWithoutInstructions">
+        Start Exam
+    </string>
 
     <string name="title_activity_slider">SLIDER</string>
 >>>>>>> f5f0293570e64ce21433bb8aeee0c309743103d0

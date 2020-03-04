@@ -19,8 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/slideViewPager"
-        android:background="@drawable/eat_icon"
         android:orientation="horizontal"></LinearLayout>
+        <!--android:background="@drawable/eat_icon"-->
 
 </RelativeLayout>
 
