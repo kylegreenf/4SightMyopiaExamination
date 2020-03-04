@@ -73,7 +73,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="15dp"
-            app:srcCompat="@mipmap/snellen_icon" />
+            app:srcCompat="@drawable/snellen_icon" />
 
         <Button
             android:id="@+id/tumblingButton"
@@ -94,7 +94,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="17dp"
-            app:srcCompat="@mipmap/tumbling_icon" />
+            app:srcCompat="@drawable/tumbling_icon" />
 
 
     </RelativeLayout>
