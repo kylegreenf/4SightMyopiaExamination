@@ -397,7 +397,7 @@ Your vision is estimated at 20/20 or better in this eye.You see perfectly!
         phone can hear it. (E.g. "Up", "Down", "Left", "Right")\n
         5) The test will continue until you reach the smallest font size or you incorrectly read 3
         letters of the same font size.\n
-    <string name="title_activity_save_to_log">SaveToLog</string>
+    </string>
 
     <string name="instructions_text">
         1) Place the phone at eye level approximately 5 meters away.\n
