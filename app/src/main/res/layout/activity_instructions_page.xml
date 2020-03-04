@@ -19,11 +19,11 @@
         tools:text="Begin Test" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/instructionsText"
         android:layout_width="347dp"
         android:layout_height="235dp"
         android:layout_marginTop="116dp"
-        android:text="@string/instructions_text"
+        android:text="@string/lorem_ipsum"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

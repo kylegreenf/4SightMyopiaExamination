@@ -22,8 +22,7 @@ public class HomePage extends AppCompatActivity {
         logBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent seelog=new Intent(getApplicationContext(),Log.class);
-                startActivity(seelog);
+                openLog();
             }
         });
 
@@ -52,7 +51,7 @@ public class HomePage extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void openSettings() {
+    private void openLog() {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }

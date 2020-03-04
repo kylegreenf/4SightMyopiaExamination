@@ -10,56 +10,68 @@
         android:id="@+id/Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Treatment Options"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="51dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/lensbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact Lenses"
-        app:layout_constraintBottom_toTopOf="@+id/prkbtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/prkbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PRK"
-        app:layout_constraintBottom_toTopOf="@+id/orthokbtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/orthokbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ortho-K"
-        app:layout_constraintBottom_toTopOf="@+id/lasikbtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/glassbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Glasses"
-        app:layout_constraintBottom_toTopOf="@+id/lensbtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/lasikbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lasik"
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        android:weightSum="5"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Header">
+
+        <Button
+            android:id="@+id/lensbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="Contact Lenses" />
+
+        <Button
+            android:id="@+id/glassbtn"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="Glasses" />
+
+        <Button
+            android:id="@+id/prkbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="PRK" />
+
+        <Button
+            android:id="@+id/orthokbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="Ortho-K" />
+
+        <Button
+            android:id="@+id/lasikbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="Lasik" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
