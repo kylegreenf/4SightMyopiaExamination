@@ -16,7 +16,8 @@
         app:layout_constraintBottom_toTopOf="@+id/resexplanation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.429" />
 
     <Button
         android:id="@+id/button5"
@@ -66,18 +67,22 @@
         android:id="@+id/resexplanation"
         android:layout_width="381dp"
         android:layout_height="244dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
         android:text="Explanation of Results"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/treatmentbtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dioptxt" />
 
     <TextView
         android:id="@+id/dioptxt"
         android:layout_width="298dp"
         android:layout_height="46dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:text="Diopter Conversion"
         android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/resexplanation"

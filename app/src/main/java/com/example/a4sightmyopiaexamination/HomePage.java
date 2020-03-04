@@ -10,7 +10,7 @@ import android.widget.Button;
 public class HomePage extends AppCompatActivity {
 
     private Button beginExamButton;
-    private Button settingsBtn;
+    private Button logBtn;
     private Button sliderBtn;
 
     @Override
@@ -18,11 +18,11 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        settingsBtn= (Button) findViewById(R.id.settingsBtn);
-        settingsBtn.setOnClickListener(new View.OnClickListener() {
+        logBtn= (Button) findViewById(R.id.logBtn);
+        logBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openSettings();
+                openLog();
             }
         });
 
@@ -43,30 +43,20 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
-        sliderBtn = (Button) findViewById(R.id.viewTestBtn);
-        sliderBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSlider();
-            }
-        });
 
     }
 
     public void openExplanation() {
-        Intent intent = new Intent(this, InstructionsPage.class);
+        Intent intent = new Intent(this, BeforeTest.class);
         startActivity(intent);
     }
 
-    private void openSettings() {
+    private void openLog() {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
 
-    private void openSlider() {
-        Intent intent = new Intent(this, SlidingActivity.class);
-        startActivity(intent);
-    }
+
 }
 
 

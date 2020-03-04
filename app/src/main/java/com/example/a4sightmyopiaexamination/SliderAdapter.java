@@ -23,12 +23,12 @@ public class SliderAdapter extends PagerAdapter {
         this.context = context;
     }
 
-    public int[] slide_images = {
-
-            R.drawable.eat_icon,
-            R.drawable.sleep_icon,
-            R.drawable.code_icon,
-    };
+//    public int[] slide_images = {
+//
+//            R.drawable.eat_icon,
+//            R.drawable.sleep_icon,
+//            R.drawable.code_icon,
+//    };
 
     public String[] slide_headings = {
 
@@ -61,11 +61,11 @@ public class SliderAdapter extends PagerAdapter {
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.slide_layout, container, false);
 
-        ImageView slideImageView = (ImageView) view.findViewById(R.id.slide_image);
+        //ImageView slideImageView = (ImageView) view.findViewById(R.id.slide_image);
         TextView slideHeading = (TextView) view.findViewById(R.id.slide_heading);
         TextView slideDescriptions = (TextView) view.findViewById(R.id.slide_desc);
 
-        slideImageView.setImageResource(slide_images[position]);
+        //slideImageView.setImageResource(slide_images[position]);
         slideHeading.setText(slide_headings[position]);
         slideDescriptions.setText(slide_descs[position]);
 
