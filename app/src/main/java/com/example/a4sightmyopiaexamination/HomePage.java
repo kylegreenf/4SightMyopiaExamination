@@ -6,13 +6,17 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class HomePage extends AppCompatActivity {
 
@@ -51,9 +55,32 @@ public class HomePage extends AppCompatActivity {
         });
 
         checkAudioPermissions();
+        isNetworkConnected();
+
+
 
 
     }
+
+    public void isNetworkConnected() {
+        try {
+            String command = "ping -c 1 google.com";
+            if (Runtime.getRuntime().exec(command).waitFor() == 0) {
+                // Internet connected
+            }
+            else {
+                // Internet not connected
+                Intent seeResult= new Intent(getApplicationContext(), TurnOnInternet.class);
+                startActivity(seeResult);
+
+            }
+        } catch (Exception e) {
+            //Error with internet
+
+        }
+
+    }
+
 
     public void openExplanation() {
         Intent intent = new Intent(this, BeforeTest.class);
@@ -64,6 +91,7 @@ public class HomePage extends AppCompatActivity {
         Intent intent = new Intent(this, Log.class);
         startActivity(intent);
     }
+
 
     private void checkAudioPermissions() {
         if (!(ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED)) {

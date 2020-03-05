@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.a4sightmyopiaexamination">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
@@ -11,57 +14,62 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".TurnOnInternet"></activity>
         <activity
             android:name=".SaveToLog"
             android:label="@string/title_activity_save_to_log"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Log"
             android:label="@string/title_activity_log"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PRK"
             android:label="@string/title_activity_prk"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Lasik"
             android:label="@string/title_activity_lasik"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Orthok"
             android:label="@string/title_activity_orthok"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Contacts"
             android:label="@string/title_activity_contacts"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Glasses"
             android:label="@string/title_activity_glasses"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SlidingActivity"
             android:label="@string/title_activity_slider"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".TreatmentOptions"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".AfterTestAnalysis"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".BeforeTest"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".InstructionsPage"
-            android:screenOrientation="portrait"/>
-        <activity
             android:screenOrientation="portrait"
-            android:name=".HomePage">
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TreatmentOptions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AfterTestAnalysis"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BeforeTest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InstructionsPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HomePage"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -69,8 +77,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:screenOrientation="portrait"
-            android:name=".MainActivity">
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

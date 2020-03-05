@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onError(int error) {
                 //letterTesting.setText(Integer.toString(error));
+                isNetworkConnected();
                 mSpeechRecognizer.cancel();
                 startNextListenTimer();
             }
@@ -193,6 +194,26 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void isNetworkConnected() {
+        try {
+            String command = "ping -c 1 google.com";
+            if (Runtime.getRuntime().exec(command).waitFor() == 0) {
+                // Internet connected
+            }
+            else {
+                // Internet not connected
+                Intent seeResult= new Intent(getApplicationContext(), TurnOnInternet.class);
+                startActivity(seeResult);
+
+            }
+        } catch (Exception e) {
+            //Error with internet
+
+        }
+
+    }
+
+
     private void requestPermission() {
         ActivityCompat.requestPermissions(this, new String[]{
                 Manifest.permission.RECORD_AUDIO}, 1);
@@ -201,10 +222,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            
+
         }
         else {
             requestPermission();
+
         }
         //Could run a check if granted or not
     }
