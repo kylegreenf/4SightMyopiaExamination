@@ -45,14 +45,14 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
-        Button resultButton = (Button) findViewById(R.id.resultpage);
+        /*Button resultButton = (Button) findViewById(R.id.resultpage);
         resultButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent seeResult= new Intent(getApplicationContext(),AfterTestAnalysis.class);
                 startActivity(seeResult);
             }
-        });
+        });*/
 
         checkAudioPermissions();
         isNetworkConnected();

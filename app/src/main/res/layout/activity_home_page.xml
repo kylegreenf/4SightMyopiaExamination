@@ -4,15 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0C0C0C"
     tools:context=".HomePage">
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="204dp"
+        android:background="#308CAB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="monospace"
         android:text="4Sight"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,9 +35,10 @@
         android:id="@+id/title2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:fontFamily="monospace"
         android:text="Myopia Diagnosis"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -35,36 +48,49 @@
 
     <Button
         android:id="@+id/BeginExamButton"
-        android:layout_width="197dp"
+        android:layout_width="250dp"
         android:layout_height="85dp"
-        android:layout_marginBottom="168dp"
+        android:layout_marginTop="360dp"
+        android:background="#308CAD"
+        android:drawableLeft="@drawable/homeicon"
+        android:drawablePadding="0dp"
+        android:fontFamily="monospace"
         android:text="Begin Examination"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title2"
         tools:text="Begin Examination" />
 
     <Button
         android:id="@+id/logBtn"
-        android:layout_width="197dp"
+        android:layout_width="250dp"
         android:layout_height="85dp"
         android:layout_marginBottom="28dp"
+        android:background="#308CAB"
+        android:fontFamily="monospace"
         android:text="View Log"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BeginExamButton"
-        app:layout_constraintVertical_bias="0.09"
+        app:layout_constraintVertical_bias="0.303"
         tools:text="View Log" />
 
-    <Button
-        android:id="@+id/resultpage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Result Page"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="206dp"
+        android:layout_height="246dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/BeginExamButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="365dp" />
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/snellenchart" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
