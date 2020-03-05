@@ -48,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
     private int testType = 0;
     private int rotationDegrees = 0;
 
+    public boolean shouldBeListening = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -152,16 +154,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startNextListenTimer() {
-        new CountDownTimer(750, 1000) {
+        if (shouldBeListening) {
+            new CountDownTimer(750, 1000) {
 
-            public void onTick(long millisUntilFinished) {
+                public void onTick(long millisUntilFinished) {
 
-            }
+                }
 
-            public void onFinish() {
-                mSpeechRecognizer.startListening(mSpeechRecognizerIntent);
-            }
-        }.start();
+                public void onFinish() {
+                    mSpeechRecognizer.startListening(mSpeechRecognizerIntent);
+                }
+            }.start();
+        }
+        else {
+            mSpeechRecognizer.cancel();
+            mSpeechRecognizer.destroy();
+        }
     }
 
     private void lowerCountdown() {
@@ -190,8 +198,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkPermission() {
         if (!(ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED)) {
+            shouldBeListening = false;
             requestPermission();
         }
+        isNetworkConnected();
     }
 
     public void isNetworkConnected() {
@@ -202,6 +212,7 @@ public class MainActivity extends AppCompatActivity {
             }
             else {
                 // Internet not connected
+                shouldBeListening = false;
                 Intent seeResult= new Intent(getApplicationContext(), TurnOnInternet.class);
                 startActivity(seeResult);
 
@@ -225,7 +236,9 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else {
-            requestPermission();
+            shouldBeListening = false;
+            Intent seeResult= new Intent(getApplicationContext(), TurnOnInternet.class);
+            startActivity(seeResult);
 
         }
         //Could run a check if granted or not
@@ -233,7 +246,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void getSpeechInput(View v) {
-        mSpeechRecognizer.startListening(mSpeechRecognizerIntent);
+        if (shouldBeListening) {
+            mSpeechRecognizer.startListening(mSpeechRecognizerIntent);
+        }
     }
 
 
@@ -417,6 +432,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openAnalysisActivity() {
+        shouldBeListening = false;
         mSpeechRecognizer.stopListening();
         mSpeechRecognizer.destroy();
         Intent intent = new Intent(this, AfterTestAnalysis.class);

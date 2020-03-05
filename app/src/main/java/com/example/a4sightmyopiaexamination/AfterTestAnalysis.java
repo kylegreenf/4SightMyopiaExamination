@@ -46,6 +46,14 @@ public class AfterTestAnalysis extends AppCompatActivity {
             }
         });
 
+        Button home= (Button) findViewById(R.id.homebtn);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHome();
+            }
+        });
+
         Button logbttn=(Button) findViewById(R.id.logbtn);
         logbttn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +63,11 @@ public class AfterTestAnalysis extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void openHome() {
+        Intent seeResult= new Intent(getApplicationContext(), HomePage.class);
+        startActivity(seeResult);
     }
 
     private String findExp(int fontSize) {

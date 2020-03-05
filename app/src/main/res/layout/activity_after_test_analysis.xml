@@ -21,16 +21,16 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Retake Test"
+        android:text="Home"
         app:layout_constraintBottom_toTopOf="@+id/logbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Proper Eyecare"
         app:layout_constraintBottom_toTopOf="@+id/button5"
@@ -39,7 +39,7 @@
 
     <Button
         android:id="@+id/treatmentbtn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="What are my treatement options?"
         app:layout_constraintBottom_toTopOf="@+id/button4"
@@ -48,7 +48,7 @@
 
     <Button
         android:id="@+id/logbtn"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Save To Log"
         app:layout_constraintBottom_toBottomOf="parent"
