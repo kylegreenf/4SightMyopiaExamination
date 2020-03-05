@@ -14,47 +14,63 @@
         <activity
             android:name=".SaveToLog"
             android:label="@string/title_activity_save_to_log"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".Log"
             android:label="@string/title_activity_log"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".PRK"
             android:label="@string/title_activity_prk"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Lasik"
             android:label="@string/title_activity_lasik"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Orthok"
             android:label="@string/title_activity_orthok"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Contacts"
             android:label="@string/title_activity_contacts"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Glasses"
             android:label="@string/title_activity_glasses"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".SlidingActivity"
             android:label="@string/title_activity_slider"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".TreatmentOptions" />
-        <activity android:name=".AfterTestAnalysis" />
-        <activity android:name=".BeforeTest"/>
-        <activity android:name=".InstructionsPage" />
-        <activity android:name=".HomePage">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".TreatmentOptions"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AfterTestAnalysis"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BeforeTest"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".InstructionsPage"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".HomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
