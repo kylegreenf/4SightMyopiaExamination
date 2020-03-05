@@ -1,5 +1,6 @@
 package com.example.a4sightmyopiaexamination;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -56,11 +57,19 @@ public class SaveToLog extends AppCompatActivity {
                 //HERE SAVE TO LOG
                 String today=currentdate.format(date);
                 String fontScore=getIntent().getStringExtra("SCORE");
-                String savedString="Name: " + name+"\nDate: " + today + "\nSide: "+ sideEye + "\nScore: " + "20/" + fontScore+"\n";
+                String savedString="Name: " + name+"\nDate: " + today + "\nSide: "+ sideEye + "\nScore: " + "20/" + fontScore+"\n\n";
                 //save to log
                 myEdit.putString(today,savedString);
                 myEdit.apply();
 
+            }
+        });
+        Button goHome=(Button) findViewById(R.id.homebtn);
+        goHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),HomePage.class);
+                startActivity(intent);
             }
         });
     }

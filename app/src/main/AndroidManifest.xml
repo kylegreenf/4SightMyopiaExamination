@@ -46,10 +46,6 @@
         <activity android:name=".TreatmentOptions" />
         <activity android:name=".AfterTestAnalysis" />
         <activity android:name=".BeforeTest"/>
-        <activity
-            android:name=".Settings"
-            android:label="@string/title_activity_settings"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".InstructionsPage" />
         <activity android:name=".HomePage">
             <intent-filter>
