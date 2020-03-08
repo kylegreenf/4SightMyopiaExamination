@@ -4,17 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TreatmentOptions"
-    android:background="@color/colorPrimary">
+    android:background="@color/colorPrimaryDark"
+    tools:context=".TreatmentOptions">
 
     <EditText
         android:id="@+id/Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:clickable="false"
+        android:cursorVisible="false"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Treatment Options"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,9 +41,10 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="Contact Lenses"
+            android:background="@drawable/rounded_button"
             android:drawableLeft="@drawable/test_clip_art"
-            android:background="@drawable/rounded_button"/>
+            android:text="Contact Lenses"
+            android:textColor="@color/colorPrimary" />
 
         <Button
             android:id="@+id/glassbtn"
@@ -48,8 +53,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:background="@drawable/rounded_button"
             android:text="Glasses"
-            android:background="@drawable/rounded_button"/>
+            android:textColor="@color/colorPrimary" />
 
         <Button
             android:id="@+id/prkbtn"
@@ -58,8 +64,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:background="@drawable/rounded_button"
             android:text="PRK"
-            android:background="@drawable/rounded_button"/>
+            android:textColor="@color/colorPrimary" />
 
         <Button
             android:id="@+id/orthokbtn"
@@ -68,8 +75,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:background="@drawable/rounded_button"
             android:text="Ortho-K"
-            android:background="@drawable/rounded_button"/>
+            android:textColor="@color/colorPrimary" />
 
         <Button
             android:id="@+id/lasikbtn"
@@ -78,7 +86,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:background="@drawable/rounded_button"
             android:text="Lasik"
-            android:background="@drawable/rounded_button"/>
+            android:textColor="@color/colorPrimary" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

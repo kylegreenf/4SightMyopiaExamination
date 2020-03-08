@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".AfterTestAnalysis">
 
     <TextView
@@ -11,7 +12,7 @@
         android:layout_width="305dp"
         android:layout_height="55dp"
         android:text="Your results:"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimary"
         android:textSize="32dp"
         app:layout_constraintBottom_toTopOf="@+id/resexplanation"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +24,9 @@
         android:id="@+id/homebtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
         android:text="Home"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/logbtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -33,7 +36,9 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
         android:text="What are my treatement options?"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/homebtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -43,7 +48,9 @@
         android:id="@+id/logbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
         android:text="Save To Log"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -64,7 +71,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="8dp"
         android:text="Explanation of Results"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimary"
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,6 +84,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
         android:text="Diopter Conversion"
+        android:textColor="@color/colorPrimary"
         android:textSize="16dp"
         app:layout_constraintBottom_toTopOf="@+id/resexplanation"
         app:layout_constraintEnd_toEndOf="parent"
