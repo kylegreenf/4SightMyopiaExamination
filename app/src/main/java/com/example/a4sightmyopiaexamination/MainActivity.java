@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void startNextListenTimer() {
         if (shouldBeListening) {
-            new CountDownTimer(750, 1000) {
+            new CountDownTimer(900, 1000) {
 
                 public void onTick(long millisUntilFinished) {
 
