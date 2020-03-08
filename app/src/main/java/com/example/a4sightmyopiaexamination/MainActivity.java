@@ -494,7 +494,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case "b":
-                if (guess.equals("b") || guess.equals("bee")) {
+                if (guess.equals("b") || guess.equals("bee") || guess.equals("beef")) {
                     return true;
                 }
                 break;
