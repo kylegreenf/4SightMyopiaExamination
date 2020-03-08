@@ -11,7 +11,7 @@
         android:id="@+id/view2"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:background="@drawable/gradient"
+        android:background="@drawable/rounded_button"
         android:backgroundTint="@android:color/transparent"
         android:backgroundTintMode="src_atop"
         app:layout_constraintEnd_toEndOf="parent"

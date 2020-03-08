@@ -23,6 +23,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Console;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Random;
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
     private int rotationDegrees = 0;
 
     public boolean shouldBeListening = true;
+
+    public int errorOnResults = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,10 +92,20 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onError(int error) {
-                //letterTesting.setText(Integer.toString(error));
                 isNetworkConnected();
-                mSpeechRecognizer.cancel();
-                startNextListenTimer();
+                //letterTesting.setText(Integer.toString(error));
+
+
+                if (error == 7) {
+                    fixError();
+
+                }
+                else {
+                    //mSpeechRecognizer.cancel();
+                    startNextListenTimer();
+                }
+
+
             }
 
             @Override
@@ -139,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     private void startCountdownTimer() {
         new CountDownTimer(1250, 1000) {
 
@@ -163,6 +177,8 @@ public class MainActivity extends AppCompatActivity {
 
                 public void onFinish() {
                     mSpeechRecognizer.startListening(mSpeechRecognizerIntent);
+                    errorOnResults = 0;
+
                 }
             }.start();
         }
@@ -170,6 +186,19 @@ public class MainActivity extends AppCompatActivity {
             mSpeechRecognizer.cancel();
             mSpeechRecognizer.destroy();
         }
+    }
+
+    private synchronized void fixError() {
+        if (errorOnResults == 1) {
+
+            errorOnResults++;
+            mSpeechRecognizer.cancel();
+            startNextListenTimer();
+        }
+        else {
+            errorOnResults++;
+        }
+
     }
 
     private void lowerCountdown() {
