@@ -13,5 +13,8 @@
         android:id="@+id/logtxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Log" />
+        android:gravity="center"
+        android:text="Log"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp" />
 </androidx.core.widget.NestedScrollView>
