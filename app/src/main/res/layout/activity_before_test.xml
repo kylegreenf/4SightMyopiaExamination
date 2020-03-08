@@ -10,7 +10,7 @@
     <Button
         android:id="@+id/startExamBtm"
         android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_height="65dp"
         android:background="@drawable/rounded_button"
         android:text="@string/startTestWithoutInstructions"
         android:textColor="#FFFFFF"
@@ -24,7 +24,7 @@
     <Button
         android:id="@+id/intstructionsBtn"
         android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_height="65"
         android:background="@drawable/rounded_button"
         android:text="@string/startTestWithInstructions"
         android:textColor="#FFFFFF"
@@ -51,7 +51,7 @@
     <Button
         android:id="@+id/snellenButton"
         android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_height="65dp"
         android:background="@drawable/rounded_button"
         android:text="@string/snellenButton"
         android:textColor="#FFFFFF"
@@ -77,7 +77,7 @@
     <Button
         android:id="@+id/tumblingButton"
         android:layout_width="130dp"
-        android:layout_height="wrap_content"
+        android:layout_height="65dp"
         android:background="@drawable/rounded_button"
         android:text="@string/floatingEButton"
         android:textColor="#FFFFFF"

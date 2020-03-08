@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InstructionsPage">
+    tools:context=".InstructionsPage"
+    >
 
     <Button
         android:id="@+id/examStart"
@@ -13,6 +14,8 @@
         android:layout_marginBottom="128dp"
         android:text="Begin Test"
         android:textSize="18sp"
+        android:background="@drawable/rounded_button"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
