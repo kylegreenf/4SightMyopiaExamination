@@ -20,7 +20,7 @@ import android.widget.Toast;
 
 public class HomePage extends AppCompatActivity {
 
-    private Button beginExamButton;
+    private Button beginExamButton; 
     private Button logBtn;
     private Button sliderBtn;
 
