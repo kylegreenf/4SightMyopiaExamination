@@ -24,7 +24,7 @@
             android:id="@+id/radioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
+            android:buttonTint="@color/colorPrimary"
             android:text="Right Eye"
             android:textColor="@color/colorPrimary"
             android:textSize="30dp" />
@@ -33,7 +33,7 @@
             android:id="@+id/r"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
+            android:buttonTint="@color/colorPrimary"
             android:text="Left Eye"
             android:textColor="@color/colorPrimary"
             android:textSize="30dp" />
@@ -44,6 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_button"
+        android:fontFamily="monospace"
         android:text="Save to Log"
         android:textColor="@color/colorPrimary"
         android:textSize="30dp"
@@ -75,6 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_button"
+        android:fontFamily="monospace"
         android:text="Home"
         android:textColor="@color/colorPrimary"
         android:textSize="30sp"

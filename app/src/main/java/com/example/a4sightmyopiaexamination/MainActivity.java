@@ -89,10 +89,26 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onError(int error) {
-                //letterTesting.setText(Integer.toString(error));
                 isNetworkConnected();
-                mSpeechRecognizer.cancel();
-                startNextListenTimer();
+
+                letterTesting.setText(Integer.toString(error));
+                switch (error) {
+                    case 7:
+                        mSpeechRecognizer.cancel();
+                        System.out.println(Integer.toString(error));
+                        //startNextListenTimer();
+                        break;
+                    case 8:
+                        mSpeechRecognizer.cancel();
+                        startNextListenTimer();
+                        break;
+
+                        default:
+                            startNextListenTimer();
+                            break;
+                }
+
+
             }
 
             @Override
@@ -107,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onPartialResults(Bundle partialResults) {
+
 
             }
 
