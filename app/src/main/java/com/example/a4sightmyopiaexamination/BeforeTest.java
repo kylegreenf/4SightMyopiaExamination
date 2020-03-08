@@ -139,17 +139,8 @@ public class BeforeTest extends AppCompatActivity {
         updateBtns();
     }
 
-    public void updateBtns(){
-//        if(snellenPressed){
-//            tumblingEButton.setBackgroundResource(android.R.drawable.btn_default);
-//            snellenButton.setBackground(getResources().getDrawable(R.drawable.button_border));
-//
-//        }
-//        if(tumblingPressed){
-//            snellenButton.setBackgroundResource(android.R.drawable.btn_default);
-//            tumblingEButton.setBackground(getResources().getDrawable(R.drawable.button_border));
-//        }
 
+    public void updateBtns(){
         if(snellenPressed || tumblingPressed){
             instructionsButton.setVisibility(View.VISIBLE);
             beginExamButton.setVisibility(View.VISIBLE);
