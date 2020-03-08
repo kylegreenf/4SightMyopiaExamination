@@ -9,12 +9,18 @@ import android.widget.Button;
 
 public class TreatmentOptions extends AppCompatActivity {
 
+    private Button eyeglass;
+    private Button lens;
+    private Button lasik;
+    private Button prk;
+    private Button orthok;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_treatment_options);
 
-        Button eyeglass = (Button) findViewById(R.id.glassbtn);
+        eyeglass = (Button) findViewById(R.id.glassbtn);
         eyeglass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -24,7 +30,7 @@ public class TreatmentOptions extends AppCompatActivity {
         });
 
 
-        Button lens= (Button) findViewById(R.id.lensbtn);
+        lens= (Button) findViewById(R.id.lensbtn);
         lens.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,7 +40,7 @@ public class TreatmentOptions extends AppCompatActivity {
         });
 
 
-        Button lasik= (Button) findViewById(R.id.lasikbtn);
+        lasik= (Button) findViewById(R.id.lasikbtn);
         lasik.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,7 +49,7 @@ public class TreatmentOptions extends AppCompatActivity {
             }
         });
 
-        Button prk= (Button) findViewById(R.id.prkbtn);
+        prk= (Button) findViewById(R.id.prkbtn);
         prk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +58,7 @@ public class TreatmentOptions extends AppCompatActivity {
             }
         });
 
-        Button orthok= (Button) findViewById(R.id.orthokbtn);
+        orthok= (Button) findViewById(R.id.orthokbtn);
         orthok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
