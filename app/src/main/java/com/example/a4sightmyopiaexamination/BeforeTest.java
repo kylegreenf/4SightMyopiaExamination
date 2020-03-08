@@ -29,7 +29,6 @@ public class BeforeTest extends AppCompatActivity {
         buttonSelected = false;
         tumblingPressed = false;
         snellenPressed = false;
-        //secondBtns = (RelativeLayout) findViewById(R.id.secondBtns);
 
         beginExamButton = (Button) findViewById(R.id.startExamBtm);
         beginExamButton.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +47,9 @@ public class BeforeTest extends AppCompatActivity {
             }
         });
 
+        instructionsButton.setVisibility(View.INVISIBLE);
+        beginExamButton.setVisibility(View.INVISIBLE);
+
 
         snellenButton = (Button) findViewById(R.id.snellenButton);
         snellenButton.setOnClickListener(new View.OnClickListener() {
@@ -64,8 +66,6 @@ public class BeforeTest extends AppCompatActivity {
                 toggletumbling();
             }
         });
-        snellenButton.setBackgroundResource(android.R.drawable.btn_default);
-        tumblingEButton.setBackgroundResource(android.R.drawable.btn_default);
 
     }
 
@@ -82,28 +82,28 @@ public class BeforeTest extends AppCompatActivity {
     public void toggletumbling(){
         if(!tumblingPressed && !snellenPressed){
             tumblingPressed = true;
-            tumblingEButton.setBackground(getResources().getDrawable(R.drawable.button_border));
-            snellenButton.setBackgroundResource(android.R.drawable.btn_default);
+            tumblingEButton.setBackground(getResources().getDrawable(R.drawable.rounded_button_pressed));
+            snellenButton.setBackgroundResource(R.drawable.rounded_button);
             settingsChartType= 1;
         }
         else if(!tumblingPressed  && snellenPressed ){
             snellenPressed = false;
-            snellenButton.setBackgroundResource(android.R.drawable.btn_default);
+            snellenButton.setBackgroundResource(R.drawable.rounded_button);
             tumblingPressed = true;
-            tumblingEButton.setBackground(getResources().getDrawable(R.drawable.button_border));
+            tumblingEButton.setBackground(getResources().getDrawable(R.drawable.rounded_button_pressed));
             settingsChartType= 1;
         }
         else if(tumblingPressed && !snellenPressed){
             tumblingPressed = false;
-            tumblingEButton.setBackgroundResource(android.R.drawable.btn_default);
-            snellenButton.setBackgroundResource(android.R.drawable.btn_default);
+            tumblingEButton.setBackgroundResource(R.drawable.rounded_button);
+            snellenButton.setBackgroundResource(R.drawable.rounded_button);
             settingsChartType= 0;
         }
         else {//tumblingPressed && snellenPressed
             snellenPressed = false;
-            snellenButton.setBackgroundResource(android.R.drawable.btn_default);
+            snellenButton.setBackgroundResource(R.drawable.rounded_button);
             tumblingPressed = false;
-            tumblingEButton.setBackgroundResource(android.R.drawable.btn_default);
+            tumblingEButton.setBackgroundResource(R.drawable.rounded_button);
             settingsChartType= 0;
         }
         updateBtns();
@@ -112,28 +112,28 @@ public class BeforeTest extends AppCompatActivity {
     public void toggleSnellen(){
         if(!snellenPressed && !tumblingPressed){
             snellenPressed = true;
-            snellenButton.setBackground(getResources().getDrawable(R.drawable.button_border));
-            tumblingEButton.setBackgroundResource(android.R.drawable.btn_default);
+            snellenButton.setBackground(getResources().getDrawable(R.drawable.rounded_button_pressed));
+            tumblingEButton.setBackgroundResource(R.drawable.rounded_button);
             settingsChartType= 0;
         }
         else if(!snellenPressed && tumblingPressed){
             snellenPressed = true;
-            snellenButton.setBackground(getResources().getDrawable(R.drawable.button_border));
+            snellenButton.setBackground(getResources().getDrawable(R.drawable.rounded_button_pressed));
             tumblingPressed = false;
-            tumblingEButton.setBackgroundResource(android.R.drawable.btn_default);
+            tumblingEButton.setBackgroundResource(R.drawable.rounded_button);
             settingsChartType= 0;
         }
         else if(snellenPressed && !tumblingPressed){ //
             snellenPressed = false;
-            snellenButton.setBackgroundResource(android.R.drawable.btn_default);
-            tumblingEButton.setBackgroundResource(android.R.drawable.btn_default);
+            snellenButton.setBackgroundResource(R.drawable.rounded_button);
+            tumblingEButton.setBackgroundResource(R.drawable.rounded_button);
             settingsChartType= 0;
         }
         else {//tumblingPressed && snellenPressed
             snellenPressed = false;
-            snellenButton.setBackgroundResource(android.R.drawable.btn_default);
+            snellenButton.setBackgroundResource(R.drawable.rounded_button);
             tumblingPressed = false;
-            tumblingEButton.setBackgroundResource(android.R.drawable.btn_default);
+            tumblingEButton.setBackgroundResource(R.drawable.rounded_button);
             settingsChartType= 0;
         }
         updateBtns();
@@ -151,10 +151,12 @@ public class BeforeTest extends AppCompatActivity {
 //        }
 
         if(snellenPressed || tumblingPressed){
-            secondBtns.setVisibility(View.VISIBLE);
+            instructionsButton.setVisibility(View.VISIBLE);
+            beginExamButton.setVisibility(View.VISIBLE);
         }
         else{
-            secondBtns.setVisibility(View.INVISIBLE);
+            instructionsButton.setVisibility(View.INVISIBLE);
+            beginExamButton.setVisibility(View.INVISIBLE);
         }
 
     }
