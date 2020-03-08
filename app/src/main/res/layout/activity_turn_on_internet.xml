@@ -29,11 +29,12 @@
         android:id="@+id/homeButton"
         android:layout_width="269dp"
         android:layout_height="55dp"
+        android:background="@drawable/rounded_button"
         android:text="Home"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/turnOnInternetDetails"
-        app:layout_constraintVertical_bias="0.545"
-        android:background="@drawable/rounded_button"/>
+        app:layout_constraintVertical_bias="0.545" />
 </androidx.constraintlayout.widget.ConstraintLayout>
