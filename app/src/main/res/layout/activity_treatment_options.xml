@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TreatmentOptions">
+    tools:context=".TreatmentOptions"
+    android:background="@color/colorPrimary">
 
     <EditText
         android:id="@+id/Header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:autoText="false"
         android:ems="10"
+        android:inputType="textPersonName"
         android:text="Treatment Options"
-        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,7 +37,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="Contact Lenses" />
+            android:text="Contact Lenses"
+            android:drawableLeft="@drawable/test_clip_art"
+            android:background="@drawable/rounded_button"
 
         <Button
             android:id="@+id/glassbtn"
@@ -46,7 +48,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="Glasses" />
+            android:text="Glasses"
+            android:background="@drawable/rounded_button"/>
 
         <Button
             android:id="@+id/prkbtn"
@@ -55,7 +58,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="PRK" />
+            android:text="PRK"
+            android:background="@drawable/rounded_button"/>
 
         <Button
             android:id="@+id/orthokbtn"
@@ -64,7 +68,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="Ortho-K" />
+            android:text="Ortho-K"
+            android:background="@drawable/rounded_button"/>
 
         <Button
             android:id="@+id/lasikbtn"
@@ -73,6 +78,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="Lasik" />
+            android:text="Lasik"
+            android:background="@drawable/rounded_button"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

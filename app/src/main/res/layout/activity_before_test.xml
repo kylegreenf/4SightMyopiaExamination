@@ -1,107 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+    <Button
+        android:id="@+id/startExamBtm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="25dp"
+        android:text="@string/startTestWithoutInstructions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/intstructionsBtn"
+        app:layout_constraintTop_toBottomOf="@+id/tumblingButton" />
 
-        android:id="@+id/secondBtns"
-        android:layout_width="400dp"
-        android:layout_height="224dp"
-        android:layout_below="@id/firstBtns"
-        android:layout_marginTop="50dp"
-        android:visibility="invisible">
+    <Button
+        android:id="@+id/intstructionsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="116dp"
+        android:text="@string/startTestWithInstructions"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/snellenButton" />
 
-        <Button
-            android:id="@+id/startExamBtm"
-            android:layout_width="165dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/intstructionsBtn"
-            android:layout_alignTop="@+id/startExamBtm"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="119dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginRight="116dp"
-            android:layout_marginBottom="42dp"
-            android:text="@string/startTestWithoutInstructions" />
+    <TextView
+        android:id="@+id/testTypeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="@string/testType"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="30dp" />
 
-        <Button
-            android:id="@+id/intstructionsBtn"
-            android:layout_width="165dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="123dp"
-            android:layout_marginLeft="140dp"
-            android:layout_marginEnd="124dp"
-            android:layout_marginBottom="33dp"
-            android:text="@string/startTestWithInstructions" />
+    <Button
+        android:id="@+id/snellenButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="120dp"
+        android:text="@string/snellenButton"
+        app:layout_constraintEnd_toStartOf="@+id/tumblingButton"
+        app:layout_constraintTop_toBottomOf="@+id/snellenImage" />
 
-    </RelativeLayout>
+    <ImageView
+        android:id="@+id/snellenImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/testTypeTextView"
+        app:srcCompat="@mipmap/snellen_icon" />
 
-    <RelativeLayout
-        android:id="@+id/firstBtns"
-        android:layout_width="match_parent"
-        android:layout_height="187dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="90dp">
+    <Button
+        android:id="@+id/tumblingButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/floatingEButton"
+        app:layout_constraintTop_toBottomOf="@+id/tumblingImage"
+        tools:layout_editor_absoluteX="251dp" />
 
-        <TextView
-            android:id="@+id/testTypeTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
-            android:text="@string/testType"
-            android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/snellenButton"
-            android:layout_width="165dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="false"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="10dp"
-            android:text="@string/snellenButton" />
-
-        <ImageView
-            android:id="@+id/snellenImage"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/snellenButton"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="15dp"
-            app:srcCompat="@mipmap/snellen_icon" />
-
-        <Button
-            android:id="@+id/tumblingButton"
-            android:layout_width="165dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="false"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_centerInParent="true"
-            android:layout_marginRight="10dp"
-            android:text="@string/floatingEButton" />
-
-        <ImageView
-            android:id="@+id/tumblingImage"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/tumblingButton"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="17dp"
-            app:srcCompat="@mipmap/tumbling_icon" />
+    <ImageView
+        android:id="@+id/tumblingImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/testTypeTextView"
+        app:srcCompat="@mipmap/tumbling_icon" />
 
 
-    </RelativeLayout>
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
