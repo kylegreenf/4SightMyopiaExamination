@@ -127,7 +127,7 @@ Your vision is estimated at 20/20 or better in this eye.You see perfectly!
         "Do not take any risks when it comes to your eyesight!\n\n"
 </string>
     <string name="prk_text">
-        "PRK - Photorefractive Keratectomy (invasive)\n"
+        "<b>PRK - Photorefractive Keratectomy (invasive)</b>\n"
 "Who is this for?\n"
 "Important: consult an optometrist before considering this option. This guide is for informative purposes only. This is not an exhaustive list of surgical options."
 "Invasive options for eye correction are only recommended for individuals over age 18, because their eyes may change until that point. Typically, surgery is for individuals"

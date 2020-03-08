@@ -1,5 +1,6 @@
 package com.example.a4sightmyopiaexamination;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -9,18 +10,19 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
+import android.view.ViewGroup;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
-
+import java.lang.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 public class SaveToLog extends AppCompatActivity {
 
     @Override
@@ -57,10 +59,14 @@ public class SaveToLog extends AppCompatActivity {
                 //HERE SAVE TO LOG
                 String today=currentdate.format(date);
                 String fontScore=getIntent().getStringExtra("SCORE");
-                String savedString="Name: " + name+"\nDate: " + today + "\nSide: "+ sideEye + "\nScore: " + "20/" + fontScore+"\n\n";
+                String savedString="Name: " + name+"\nDate: " + today + "\nSide: "+ sideEye + "\nScore: " + "20/" + fontScore+"\n";
                 //save to log
                 myEdit.putString(today,savedString);
                 myEdit.apply();
+                Intent intent=new Intent(getApplicationContext(),AfterTestAnalysis.class);
+                intent.putExtra("SCORE",fontScore);
+                Toast.makeText(getApplicationContext(), "Successfully saved to log", Toast.LENGTH_SHORT);
+                startActivity(intent);
 
             }
         });
