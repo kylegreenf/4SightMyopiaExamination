@@ -29,7 +29,7 @@ public class BeforeTest extends AppCompatActivity {
         buttonSelected = false;
         tumblingPressed = false;
         snellenPressed = false;
-        secondBtns = (RelativeLayout) findViewById(R.id.secondBtns);
+        //secondBtns = (RelativeLayout) findViewById(R.id.secondBtns);
 
         beginExamButton = (Button) findViewById(R.id.startExamBtm);
         beginExamButton.setOnClickListener(new View.OnClickListener() {
