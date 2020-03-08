@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InstructionsPage"
-    >
+    android:background="@drawable/gradient"
+    tools:context=".InstructionsPage">
 
     <Button
         android:id="@+id/examStart"
         android:layout_width="197dp"
         android:layout_height="85dp"
         android:layout_marginBottom="128dp"
-        android:text="Begin Test"
-        android:textSize="18sp"
         android:background="@drawable/rounded_button"
+        android:text="Begin Test"
         android:textColor="#FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,6 +27,7 @@
         android:layout_height="235dp"
         android:layout_marginTop="116dp"
         android:text="@string/lorem_ipsum"
+        android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

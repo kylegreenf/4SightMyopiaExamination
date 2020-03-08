@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0C0C0C"
+    android:background="@drawable/gradient"
     tools:context=".HomePage">
 
     <View
@@ -79,7 +79,7 @@
         tools:text="Begin Examination" />
 
     <Button
-        android:id="@+id/beginExamButton"
+        android:id="@+id/eyecarebtn"
         android:layout_width="166dp"
         android:layout_height="166dp"
         android:layout_marginStart="20dp"
@@ -97,7 +97,7 @@
         tools:text="Proper Eyecare" />
 
     <Button
-        android:id="@+id/beginExamButton2"
+        android:id="@+id/instrBtn"
         android:layout_width="166dp"
         android:layout_height="166dp"
         android:layout_marginTop="108dp"
@@ -110,8 +110,8 @@
         android:textIsSelectable="false"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.431"
-        app:layout_constraintStart_toEndOf="@+id/BeginExamButton"
+        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title2"
         tools:text="Instructions" />
 
@@ -128,9 +128,7 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/beginExamButton"
-        app:layout_constraintTop_toBottomOf="@+id/beginExamButton2"
+        app:layout_constraintTop_toBottomOf="@+id/instrBtn"
         tools:text="View Log" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
