@@ -24,6 +24,7 @@ public class SlidingActivity extends AppCompatActivity {
 
         mSliderViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         mDotLayout = (LinearLayout) findViewById(R.id.dotsLayout);
+        mDotLayout.bringToFront();
         sliderAdapter = new SliderAdapter(this);
 
         mSliderViewPager.setAdapter(sliderAdapter);

@@ -36,6 +36,15 @@ public class AfterTestAnalysis extends AppCompatActivity {
                 startActivity(treatmentIntent);
             }
         });
+
+        Button eyecareBtn=(Button) findViewById(R.id.eyecareButton);
+        treatment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent properEyecareIntent= new Intent(getApplicationContext(),Proper_eyecare.class);
+                startActivity(properEyecareIntent);
+            }
+        });
     }
 
     private void findScore(int fontSize) {

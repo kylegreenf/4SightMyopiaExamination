@@ -45,10 +45,10 @@
         android:text="Retake Test"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/eyecareButton" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/eyecareButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Proper Eyecare"

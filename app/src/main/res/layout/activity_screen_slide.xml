@@ -8,19 +8,21 @@
     tools:context=".SlidingActivity"
     android:background="@drawable/sliding_background">
 
+    <LinearLayout
+        android:id="@+id/dotsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:layout_below="@+id/slideViewPager"
+        android:layout_marginTop="-2dp"
+        android:background="#000000"
+        android:orientation="horizontal"></LinearLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/slideViewPager"
         android:layout_width="match_parent"
         android:layout_height="652dp"/>
 
-    <LinearLayout
-        android:id="@+id/dotsLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/slideViewPager"
-        android:background="@drawable/eat_icon"
-        android:orientation="horizontal"></LinearLayout>
+
 
 </RelativeLayout>
 
