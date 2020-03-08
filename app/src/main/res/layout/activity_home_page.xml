@@ -10,8 +10,10 @@
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="204dp"
-        android:background="#308CAB"
+        android:layout_height="150dp"
+        android:background="@drawable/gradient"
+        android:backgroundTint="@android:color/transparent"
+        android:backgroundTintMode="src_atop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,16 +22,27 @@
         android:id="@+id/title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="monospace"
         android:text="4Sight"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="4Sight" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="144dp"
+        android:layout_height="119dp"
+        app:layout_constraintEnd_toStartOf="@+id/title1"
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view2"
+        app:srcCompat="@drawable/eye_img_foreground" />
 
     <TextView
         android:id="@+id/title2"
@@ -41,68 +54,84 @@
         android:textColor="#FFFFFF"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title1"
         tools:text="Myopia Diagnosis" />
 
     <Button
         android:id="@+id/BeginExamButton"
-        android:layout_width="250dp"
-        android:layout_height="85dp"
-        android:layout_marginTop="360dp"
-        android:background="#308CAD"
+        android:layout_width="156dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="192dp"
+        android:background="@drawable/gradient"
         android:drawableLeft="@drawable/begin_exam_img"
         android:drawablePadding="6dp"
         android:fontFamily="monospace"
+
         android:text="Begin Examination"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title2"
         tools:text="Begin Examination" />
 
     <Button
+        android:id="@+id/beginExamButton"
+        android:layout_width="156dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="388dp"
+        android:background="@drawable/gradient"
+        android:drawableLeft="@drawable/begin_exam_img"
+        android:drawablePadding="6dp"
+        android:fontFamily="monospace"
+
+        android:text="Proper Eyecare"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title2"
+        tools:text="Proper Eyecare" />
+
+    <Button
+        android:id="@+id/beginExamButton2"
+        android:layout_width="156dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="192dp"
+        android:background="@drawable/gradient"
+        android:drawableLeft="@drawable/begin_exam_img"
+        android:drawablePadding="6dp"
+        android:fontFamily="monospace"
+
+        android:text="Instructions"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.647"
+        app:layout_constraintStart_toEndOf="@+id/BeginExamButton"
+        app:layout_constraintTop_toBottomOf="@+id/title2"
+        tools:text="Instructions" />
+
+    <Button
         android:id="@+id/logBtn"
-        android:layout_width="250dp"
-        android:layout_height="85dp"
-        android:layout_marginBottom="28dp"
-        android:background="#308CAB"
+        android:layout_width="148dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/gradient"
         android:drawableLeft="@drawable/test_results_img"
         android:fontFamily="monospace"
         android:text="View Log"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BeginExamButton"
-        app:layout_constraintVertical_bias="0.303"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/beginExamButton"
+        app:layout_constraintTop_toBottomOf="@+id/beginExamButton2"
         tools:text="View Log" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="206dp"
-        android:layout_height="246dp"
-        android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/BeginExamButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/snellenchart" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="144dp"
-        android:layout_height="119dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toStartOf="@+id/title1"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view2"
-        app:srcCompat="@drawable/eye_img_foreground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
