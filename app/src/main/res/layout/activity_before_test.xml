@@ -24,7 +24,7 @@
     <Button
         android:id="@+id/intstructionsBtn"
         android:layout_width="130dp"
-        android:layout_height="65"
+        android:layout_height="65dp"
         android:background="@drawable/rounded_button"
         android:text="@string/startTestWithInstructions"
         android:textColor="#FFFFFF"
@@ -79,7 +79,7 @@
         android:layout_width="130dp"
         android:layout_height="65dp"
         android:background="@drawable/rounded_button"
-        android:text="@string/floatingEButton"
+        android:text="@string/tumblingEButton"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

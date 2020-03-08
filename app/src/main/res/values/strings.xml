@@ -157,7 +157,7 @@ Your vision is estimated at 20/20 or better in this eye.You see perfectly!
 "Vision loss/damage\n"
 "Chronic pain\n"
 "Dry eyes\n\n"
-"Usage instructions:\n"
+        "<b>Usage instructions:</b>\n"
 "A post-PRK care plan will be given to the patient post-surgery. The most important thing is to follow those instructions, but here is a general guideline."
 "Generally, keeping the eye moist with prescribed eye drops is common.Avoid straining the eyes and do not shower until a day after the surgery."
 "Unlike LASIK, the cornea has to regrow the removed area, so there will most likely be side effects 2-4 days after the surgery. Over-the-counter painkillers and"
@@ -415,8 +415,8 @@ Your vision is estimated at 20/20 or better in this eye.You see perfectly!
     <string name="snellenButton">
         Snellen
     </string>
-    <string name="floatingEButton">
-        Floating E
+    <string name="tumblingEButton">
+        tumbling E
     </string>
     <string name="testType">
         Select which test you would like to take
