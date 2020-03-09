@@ -3,7 +3,8 @@
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_glasses">Glasses</string>
     <string name="worst">
-        Your vision is estimated to be worse than 20/200. This is very serious. How are you able to read this?
+        Your vision is estimated to be worse than 20/200. This is very serious and we would recommend seeking treatment immediately.
+        You are at a high risk of day-to-day life accidents and should not operate a vehicle at this visual acuity.
     </string>
     <string name="info20200">
 Your vision is estimated at 20/200 in this eye. The smallest letters read by somebody with 20/200 vision at 20 feet could be read at 200 feet by a person with normal (20/20) visual acuity.
@@ -40,7 +41,7 @@ Your vision is estimated at 20/30 in this eye. The smallest letters read by some
 Your vision is estimated at 20/25 in this eye. The smallest letters read by somebody with 20/25 vision at 20 feet could be read at 25 feet by a person with normal (20/20) visual acuity.
     </string>
     <string name="info2020">
-Your vision is estimated at 20/20 or better in this eye.You see perfectly!
+Your vision is estimated at 20/20 or better in this eye. You see perfectly!
     </string>
     <string name="glasses_text">
         "<b>Cost</b>: The average cost for standard prescription glasses is around $196 in the US. However,"
@@ -82,7 +83,7 @@ Your vision is estimated at 20/20 or better in this eye.You see perfectly!
 
     </string>
     <string name="contact_text">
-    "Types: There are several different types of contact lenses and it is important to know which"
+    "<b>Types:</b> There are several different types of contact lenses and it is important to know which"
         "kind of get based on your needs. \n"
 
 "When it comes to material, there are soft lenses, silicone hydrogel lenses, gas permeable lenses,"

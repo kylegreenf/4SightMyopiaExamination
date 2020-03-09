@@ -111,7 +111,7 @@ public class HomePage extends AppCompatActivity {
     }
 
     public void openEyecare() {
-        Intent intent = new Intent(this, Proper_eyecare.class);
+        Intent intent = new Intent(this, TreatmentOptions.class);
         startActivity(intent);
     }
 
