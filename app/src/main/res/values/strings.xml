@@ -380,24 +380,24 @@ Your vision is estimated at 20/20 or better in this eye. You see perfectly!
 
 
     <string name="snellen_instructions_text">
-        1) Find a quiet area to conduct your test.\n
-        2) Place the phone at eye level approximately 5 meters away.\n
+        1) Find a quiet area to conduct your test.\n\n
+        2) Place the phone at eye level approximately 5 meters away.\n\n
         3) To test your left eye cover your right eye. To test your right eye cover your left eye.
-        to test both don\'t cover either eye.\n
-        4) When a letter appears on the screen, read the letter loud enough that the phone can hear it\n
+        to test both don\'t cover either eye.\n\n
+        4) When a letter appears on the screen, read the letter loud enough that the phone can hear it\n\n
         5) The test will continue until you reach the smallest font size or you incorrectly read 3
-        letters of the same font size.\n
+        letters of the same font size.\n\n
     </string>
 
     <string name="tumbling_instructions_text">
-        1) Find a quiet area to conduct your test.\n
-        2) Place the phone at eye level approximately 5 meters away.\n
+        1) Find a quiet area to conduct your test.\n\n
+        2) Place the phone at eye level approximately 5 meters away.\n\n
         3) To test your left eye cover your right eye. To test your right eye cover your left eye.
-        to test both don\'t cover either eye.\n
+        to test both don\'t cover either eye.\n\n
         4) When an E appears on the screen, indicate the direction of the E loud enough that the
-        phone can hear it. (E.g. "Up", "Down", "Left", "Right")\n
+        phone can hear it. (E.g. "Up", "Down", "Left", "Right")\n\n
         5) The test will continue until you reach the smallest font size or you incorrectly read 3
-        letters of the same font size.\n
+        letters of the same font size.\n\n
     </string>
 
     <string name="instructions_text">

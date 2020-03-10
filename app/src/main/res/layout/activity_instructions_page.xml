@@ -11,7 +11,7 @@
         android:id="@+id/examStart"
         android:layout_width="197dp"
         android:layout_height="85dp"
-        android:layout_marginBottom="128dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/rounded_button"
         android:text="Begin Test"
         android:textColor="#FFFFFF"
@@ -23,13 +23,32 @@
 
     <TextView
         android:id="@+id/instructionsText"
-        android:layout_width="347dp"
-        android:layout_height="235dp"
-        android:layout_marginTop="116dp"
+        android:layout_width="360dp"
+        android:layout_height="358dp"
+        android:layout_marginTop="52dp"
         android:text="@string/lorem_ipsum"
         android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/snellen_instructions_text" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="324dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginBottom="8dp"
+        android:tint="@color/colorPrimaryDark"
+        android:tintMode="add"
+        app:layout_constraintBottom_toTopOf="@+id/examStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructionsText"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/voice_instructions" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

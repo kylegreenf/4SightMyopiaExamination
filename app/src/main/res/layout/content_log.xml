@@ -5,6 +5,7 @@
     android:id="@+id/logtext"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Log"
     tools:showIn="@layout/activity_log">
@@ -15,6 +16,6 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Log"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimary"
         android:textSize="24sp" />
 </androidx.core.widget.NestedScrollView>
