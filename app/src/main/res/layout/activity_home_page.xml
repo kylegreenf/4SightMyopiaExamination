@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0C0C0C"
+    android:background="@drawable/gradient"
     tools:context=".HomePage">
 
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:background="@drawable/gradient"
+        android:background="@drawable/rounded_button"
         android:backgroundTint="@android:color/transparent"
         android:backgroundTintMode="src_atop"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,8 +61,9 @@
 
     <Button
         android:id="@+id/BeginExamButton"
-        android:layout_width="166dp"
-        android:layout_height="166dp"
+        android:layout_width="166sp"
+        android:layout_height="166sp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="108dp"
         android:background="@drawable/rounded_button"
         android:drawableLeft="@drawable/begin_exam_img"
@@ -72,35 +73,37 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintEnd_toStartOf="@+id/instrBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title2"
         tools:text="Begin Examination" />
 
     <Button
-        android:id="@+id/beginExamButton"
-        android:layout_width="166dp"
-        android:layout_height="166dp"
+        android:id="@+id/eyecarebtn"
+        android:layout_width="166sp"
+        android:layout_height="166sp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="92dp"
         android:background="@drawable/rounded_button"
-        android:drawableLeft="@drawable/proper_eyecare_button_img"
 
+        android:drawableLeft="@drawable/proper_eyecare_button_img"
         android:drawablePadding="6dp"
         android:fontFamily="monospace"
-        android:text="Proper Eyecare"
+        android:text="Treatement Options"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/logBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BeginExamButton"
-        tools:text="Proper Eyecare" />
+        tools:text="Treatement Options" />
 
     <Button
-        android:id="@+id/beginExamButton2"
-        android:layout_width="166dp"
-        android:layout_height="166dp"
+        android:id="@+id/instrBtn"
+        android:layout_width="166sp"
+        android:layout_height="166sp"
+        android:layout_marginStart="39dp"
         android:layout_marginTop="108dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/rounded_button"
         android:drawableLeft="@drawable/instructions_button_img"
         android:drawablePadding="6dp"
@@ -110,17 +113,17 @@
         android:textIsSelectable="false"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toEndOf="@+id/BeginExamButton"
         app:layout_constraintTop_toBottomOf="@+id/title2"
         tools:text="Instructions" />
 
     <Button
         android:id="@+id/logBtn"
-        android:layout_width="166dp"
-        android:layout_height="166dp"
+        android:layout_width="166sp"
+        android:layout_height="166sp"
+        android:layout_marginStart="39dp"
         android:layout_marginTop="92dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/rounded_button"
         android:drawableLeft="@drawable/test_results_img"
         android:fontFamily="monospace"
@@ -128,9 +131,8 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/beginExamButton"
-        app:layout_constraintTop_toBottomOf="@+id/beginExamButton2"
+        app:layout_constraintStart_toEndOf="@+id/eyecarebtn"
+        app:layout_constraintTop_toBottomOf="@+id/instrBtn"
         tools:text="View Log" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

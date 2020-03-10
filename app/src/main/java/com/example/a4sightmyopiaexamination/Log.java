@@ -26,7 +26,7 @@ public class Log extends AppCompatActivity {
         //for the log page
         TextView tv= (TextView) findViewById(R.id.logtxt);
         String log="LOG:\n\n";
-        SharedPreferences pref=getSharedPreferences("RESULTLOG",MODE_APPEND);
+        SharedPreferences pref=getSharedPreferences("RESULTLOG", MODE_APPEND);
         TreeMap<String, ?> keys = new TreeMap<String, Object>(pref.getAll());
         for (Map.Entry<String,?> entry: keys.entrySet()){
             log+=entry.getValue().toString();

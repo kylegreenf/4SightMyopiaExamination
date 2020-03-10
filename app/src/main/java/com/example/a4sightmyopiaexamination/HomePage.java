@@ -22,6 +22,8 @@ public class HomePage extends AppCompatActivity {
 
     private Button beginExamButton;
     private Button logBtn;
+    private Button eyecarebtn;
+    private Button instrBtn;
     private Button sliderBtn;
 
     @Override
@@ -34,6 +36,22 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openLog();
+            }
+        });
+
+        eyecarebtn= (Button) findViewById(R.id.eyecarebtn);
+        eyecarebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openEyecare();
+            }
+        });
+
+        instrBtn= (Button) findViewById(R.id.instrBtn);
+        instrBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openInstructions();
             }
         });
 
@@ -84,6 +102,16 @@ public class HomePage extends AppCompatActivity {
 
     public void openExplanation() {
         Intent intent = new Intent(this, BeforeTest.class);
+        startActivity(intent);
+    }
+
+    public void openInstructions() {
+        Intent intent = new Intent(this, InstructionsPage.class);
+        startActivity(intent);
+    }
+
+    public void openEyecare() {
+        Intent intent = new Intent(this, TreatmentOptions.class);
         startActivity(intent);
     }
 

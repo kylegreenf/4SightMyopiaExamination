@@ -7,32 +7,35 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".TreatmentOptions">
 
-    <EditText
-        android:id="@+id/Header"
+    <TextView
+        android:id="@+id/TreatmentText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="76dp"
         android:clickable="false"
-        android:cursorVisible="false"
-        android:ems="10"
-        android:inputType="textPersonName"
+        android:fontFamily="monospace"
+        android:paddingBottom="35sp"
         android:text="Treatment Options"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Treatment Options" />
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"
         android:orientation="vertical"
         android:weightSum="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Header">
+        app:layout_constraintTop_toBottomOf="@+id/TreatmentText">
 
         <Button
             android:id="@+id/lensbtn"
@@ -41,8 +44,11 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="monospace"
             android:text="Contact Lenses"
-            android:background="@drawable/rounded_button"/>
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/glassbtn"
@@ -52,8 +58,10 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="@drawable/rounded_button"
+            android:fontFamily="monospace"
             android:text="Glasses"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/prkbtn"
@@ -63,8 +71,10 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="@drawable/rounded_button"
+            android:fontFamily="monospace"
             android:text="PRK"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/orthokbtn"
@@ -74,8 +84,10 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="@drawable/rounded_button"
+            android:fontFamily="monospace"
             android:text="Ortho-K"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/lasikbtn"
@@ -85,7 +97,10 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="@drawable/rounded_button"
+            android:fontFamily="monospace"
             android:text="Lasik"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

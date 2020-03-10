@@ -3,7 +3,8 @@
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_glasses">Glasses</string>
     <string name="worst">
-        Your vision is estimated to be worse than 20/200. This is very serious. How are you able to read this?
+        Your vision is estimated to be worse than 20/200. This is very serious and we would recommend seeking treatment immediately.
+        You are at a high risk of day-to-day life accidents and should not operate a vehicle at this visual acuity.
     </string>
     <string name="info20200">
 Your vision is estimated at 20/200 in this eye. The smallest letters read by somebody with 20/200 vision at 20 feet could be read at 200 feet by a person with normal (20/20) visual acuity.
@@ -40,7 +41,7 @@ Your vision is estimated at 20/30 in this eye. The smallest letters read by some
 Your vision is estimated at 20/25 in this eye. The smallest letters read by somebody with 20/25 vision at 20 feet could be read at 25 feet by a person with normal (20/20) visual acuity.
     </string>
     <string name="info2020">
-Your vision is estimated at 20/20 or better in this eye.You see perfectly!
+Your vision is estimated at 20/20 or better in this eye. You see perfectly!
     </string>
     <string name="glasses_text">
         "<b><u>Glasses</u></b>\n"
@@ -387,24 +388,24 @@ frame that fits your face, and is comfortable. Frames which are too tight or too
 
 
     <string name="snellen_instructions_text">
-        1) Find a quiet area to conduct your test.\n
-        2) Place the phone at eye level approximately 3 meters away.\n
+        1) Find a quiet area to conduct your test.\n\n
+        2) Place the phone at eye level approximately 3 meters away.\n\n
         3) To test your left eye cover your right eye. To test your right eye cover your left eye.
-        to test both don\'t cover either eye.\n
-        4) When a letter appears on the screen, read the letter loud enough that the phone can hear it\n
+        to test both don\'t cover either eye.\n\n
+        4) When a letter appears on the screen, read the letter loud enough that the phone can hear it\n\n
         5) The test will continue until you reach the smallest font size or you incorrectly read 3
-        letters of the same font size.\n
+        letters of the same font size.\n\n
     </string>
 
     <string name="tumbling_instructions_text">
-        1) Find a quiet area to conduct your test.\n
-        2) Place the phone at eye level approximately 3 meters away.\n
+        1) Find a quiet area to conduct your test.\n\n
+        2) Place the phone at eye level approximately 3 meters away.\n\n
         3) To test your left eye cover your right eye. To test your right eye cover your left eye.
-        to test both don\'t cover either eye.\n
+        to test both don\'t cover either eye.\n\n
         4) When an E appears on the screen, indicate the direction of the E loud enough that the
-        phone can hear it. (E.g. "Up", "Down", "Left", "Right")\n
+        phone can hear it. (E.g. "Up", "Down", "Left", "Right")\n\n
         5) The test will continue until you reach the smallest font size or you incorrectly read 3
-        letters of the same font size.\n
+        letters of the same font size.\n\n
     </string>
 
     <string name="instructions_text">
@@ -424,7 +425,7 @@ frame that fits your face, and is comfortable. Frames which are too tight or too
         Snellen
     </string>
     <string name="tumblingEButton">
-        tumbling E
+        Tumbling E
     </string>
     <string name="testType">
         Select which test you would like to take
