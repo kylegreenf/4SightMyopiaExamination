@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onError(int error) {
                 isNetworkConnected();
-                //letterTesting.setText(Integer.toString(error));
+                System.out.println("DLAKE: " + Integer.toString(error));
 
 
                 if (error == 7) {
@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private synchronized void fixError() {
-        if (errorOnResults == 1) {
+        if (errorOnResults == 0) {
 
             errorOnResults++;
             mSpeechRecognizer.cancel();
