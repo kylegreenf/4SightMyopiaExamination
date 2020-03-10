@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/startExamBtm"
-        android:layout_width="130dp"
+        android:layout_width="250dp"
         android:layout_height="65dp"
         android:background="@drawable/rounded_button"
         android:fontFamily="monospace"
@@ -17,14 +17,14 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/testTypeTextView"
-        app:layout_constraintVertical_bias=".75" />
+        app:layout_constraintVertical_bias="0.817" />
 
     <Button
         android:id="@+id/intstructionsBtn"
-        android:layout_width="130dp"
+        android:layout_width="250dp"
         android:layout_height="65dp"
         android:background="@drawable/rounded_button"
         android:fontFamily="monospace"
@@ -32,10 +32,10 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/testTypeTextView"
-        app:layout_constraintVertical_bias=".75" />
+        app:layout_constraintVertical_bias="0.667" />
 
     <TextView
         android:id="@+id/testTypeTextView"
@@ -82,8 +82,8 @@
         android:layout_width="130dp"
         android:layout_height="65dp"
         android:background="@drawable/rounded_button"
+        android:text="@string/tumblingEButton"
         android:fontFamily="monospace"
-        android:text="@string/floatingEButton"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

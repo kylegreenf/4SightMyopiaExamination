@@ -16,5 +16,8 @@ public class PRK extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prk);
+//        Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(myToolbar);
+//        getSupportActionBar().setDisplayShowTitleEnabled(true);
     }
 }
