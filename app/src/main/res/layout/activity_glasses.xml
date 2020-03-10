@@ -5,17 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".Glasses">
+    tools:context=".Glasses"
+    android:background="@drawable/gradient">>
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/logToolbar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_height"
-        android:fitsSystemWindows="true"
-        android:theme="@style/AppTheme.AppBarOverlay"/>
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/logToolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/app_bar_height"-->
+<!--        android:fitsSystemWindows="true"-->
+<!--        android:theme="@style/AppTheme.AppBarOverlay"/>-->
 
     <include
-        layout="@layout/content_glasses"
-        android:layout_height="wrap_content" />
+        layout="@layout/content_glasses"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
