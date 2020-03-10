@@ -64,9 +64,9 @@ public class SaveToLog extends AppCompatActivity {
                 myEdit.putString(today,savedString);
                 myEdit.apply();
                 Intent intent=new Intent(getApplicationContext(),AfterTestAnalysis.class);
-                intent.putExtra("SCORE",fontScore);
                 Toast.makeText(getApplicationContext(), "Successfully saved to log", Toast.LENGTH_SHORT);
-                startActivity(intent);
+                intent.setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                startActivityIfNeeded(intent, 0);
 
             }
         });
