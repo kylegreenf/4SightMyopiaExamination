@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onError(int error) {
                 isNetworkConnected();
-                System.out.println("DLAKE: " + Integer.toString(error));
+                //System.out.println("DLAKE: " + Integer.toString(error));
 
 
                 if (error == 7) {
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else {
-                    //mSpeechRecognizer.cancel();
+                    mSpeechRecognizer.cancel();
                     startNextListenTimer();
                 }
 
@@ -188,16 +188,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private synchronized void fixError() {
-        if (errorOnResults == 0) {
+    private void fixError() {
 
             errorOnResults++;
             mSpeechRecognizer.cancel();
             startNextListenTimer();
-        }
-        else {
-            errorOnResults++;
-        }
 
     }
 
@@ -623,7 +618,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case "v":
-                if (guess.equals("v") || guess.equals("pee")) {
+                if (guess.equals("v") || guess.equals("pee") || guess.equals("please")) {
                     return true;
                 }
                 break;

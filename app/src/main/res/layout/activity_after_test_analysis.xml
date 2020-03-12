@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_button"
-        android:text="What are my treatement options?"
+        android:text="What are my treatment options?"
         android:textColor="@color/colorPrimary"
         app:layout_constraintBottom_toTopOf="@+id/homebtn"
         app:layout_constraintEnd_toEndOf="parent"
