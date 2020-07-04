@@ -1,5 +1,5 @@
 # 4SightMyopiaExamination
-Android application to diagnose myopia (nearsightedness)
+Android application to diagnose myopia (nearsightedness) using a voice-activated Snellen eye chart.
 
 Project can be run by opening with Android Studio 3.6 or above.
 
