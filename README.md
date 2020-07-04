@@ -1,4 +1,6 @@
 # 4SightMyopiaExamination
 Android application to diagnose myopia (nearsightedness)
 
-As the project is not finished the best way to run the code is currently to import and build via android studio
+Project can be run by opening with Android Studio 3.6 or above.
+
+Device must be Android version 5 or above and have access to a microphone. As of current, medical applications are not allowed on the Android app store
